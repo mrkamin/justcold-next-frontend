@@ -1,22 +1,42 @@
+"use client"
+import { useState } from 'react';
 import { SvgLogo } from '../svg'
+import { FiMenu, FiX } from 'react-icons/fi';
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div className="flex flex-col items-center w-full absolute z-20 top-[2rem] bg-[rgba(0,0,0,0.3)]">
-      <nav className="w-full md:w-[90%] lg:w-[75%] flex justify-between items-center text-white">
-        <SvgLogo />
-        <div className="flex gap-5 items-center">
-          <ul className="flex gap-3">
-            <li>Home</li>
-            <li>Services</li>
-            <li>About Us</li>
-            <li>Gallery</li>
-            <li>Testimonials</li>
-            <li>Contact</li>
+    <div className="flex flex-col items-center w-full absolute z-40 top-[2re] bg-transparent p-4">
+      <nav className="w-full md:w-[90%] lg:w-[80%] flex justify-between items-center text-white"
+      >
+        <div className='z-20'>
+          <SvgLogo />
+        </div>
+        <div>
+        <button className='md:hidden text-white text-2xl z-50 relative'
+                onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? <FiX /> : <FiMenu />}
+        </button>
+        <div className={`absolute md:static top-0 left-0 w-full bg-[rgba(0,0,0,0.8)]
+                         md:bg-transparent transition-transform duration-300 ease-in-out 
+                         ${isOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"}
+                         md:flex md:gap-5 md:items-center`}
+        >
+          <ul className="flex flex-col gap-5 p-5 md:p-0 md:flex-row md:gap-3 text-lg">
+            <li className='hover:text-gray-300 cursor-pointer'>Home</li>
+            <li className='hover:text-gray-300 cursor-pointer'>Services</li>
+            <li className='hover:text-gray-300 cursor-pointer'>About Us</li>
+            <li className='hover:text-gray-300 cursor-pointer'>Gallery</li>
+            <li className='hover:text-gray-300 cursor-pointer'>Testimonials</li>
+            <li className='hover:text-gray-300 cursor-pointer'>Contact</li>
           </ul>
-          <button className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">
+          <button className="bg-[#24b8eb] text-white px-4 py-2 rounded-lg hover:bg-blue-600
+                             transition">
             Get a Free Estimation
           </button>
+        </div>
         </div>
       </nav>
     </div>

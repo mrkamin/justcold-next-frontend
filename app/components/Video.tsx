@@ -6,6 +6,18 @@ const Video = () => {
         height: "100vh", 
         overflow: "hidden" 
       }}>
+        <div style={{ 
+            position: "absolute", 
+            top: "50%", 
+            left: "50%", 
+            width: "110%", 
+            height: "120%",
+            pointerEvents: "none",
+            background: "rgba(0,0,0,0.6)",
+            zIndex: 15, 
+            transform: "translate(-50%, -50%)"
+          }}             
+          ></div>
         <iframe 
           src="https://drive.google.com/file/d/17lUTtdIINr8VgYtJxwwMhAeTthUB7R51/preview" 
           style={{ 
