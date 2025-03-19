@@ -1,7 +1,8 @@
 const HeroTitle = () => {
   return (
-    <div className="absolute top-40 left-35 lg:w-[38%]
-                    flex flex-col gap-2 z-30"
+    <div className="absolute top-40 md:left-5 lg:left-35 
+                    sm:w-[100%] md:w-[80%] lg:w-[50%]
+                    flex flex-col gap-2 z-30 p-5"
     >
       <p className="bg-gradient-to-r from-blue-800 to-[#24b8eb] text-white p-2 rounded-[0.5rem]
                     w-fit"
