@@ -192,3 +192,34 @@ export const SvgLogo = () => (
     </svg>
   </>
 );
+
+const BottomWave = () => (
+  <div className="relative w-full">
+<svg width="100%" height="150" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+  {/* Define the gradient */}
+  <defs>
+    <linearGradient id="waveGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style={{ stopColor: '#6AB7F5', stopOpacity: 1 }} />
+      <stop offset="100%" style={{ stopColor: '#2C3E50', stopOpacity: 1 }} />
+    </linearGradient>
+  </defs>
+  {/* Draw the wavy shape */}
+  <path
+    d="M0,0 
+       V50 
+       C50,10 100,90 150,50 
+       C200,10 250,90 300,50 
+       C350,10 400,90 450,50 
+       C500,10 550,90 600,50 
+       C650,10 700,90 750,50 
+       C800,10 850,90 900,50 
+       C950,10 1000,90 1050,50 
+       C1100,10 1150,90 1200,50 
+       V150 H0 Z"
+    fill="url(#waveGradient)"
+  />
+</svg>
+  </div>
+);
+
+export default BottomWave;

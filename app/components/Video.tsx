@@ -1,9 +1,10 @@
+
 const Video = () => {
     return (
       <div style={{ 
         position: "relative", 
         width: "100vw", 
-        height: "100vh", 
+        height: "90vh", 
         overflow: "hidden" 
       }}>
         <div style={{ 
