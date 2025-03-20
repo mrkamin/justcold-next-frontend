@@ -1,3 +1,4 @@
+import BottomWave from "../svg";
 
 const Video = () => {
     return (
@@ -34,6 +35,7 @@ const Video = () => {
           allowFullScreen
           frameBorder="0"
         ></iframe>
+        <BottomWave />
       </div>
     );
   }
