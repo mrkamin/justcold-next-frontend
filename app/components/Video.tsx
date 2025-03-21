@@ -1,4 +1,4 @@
-import BottomWave from "../svg";
+import { BottomWave } from "../svg";
 
 const Video = () => {
     return (

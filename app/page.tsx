@@ -1,3 +1,4 @@
+import About from "./components/About";
 import HeroTitle from "./components/HeroTitle";
 import Navbar from "./components/Navbar";
 import NavUpperHead from "./components/NavUpperHead";
@@ -11,6 +12,7 @@ export default function Home() {
       <Navbar />
       <Video />
       <HeroTitle />
+      <About />
     </div>
   );
 }
