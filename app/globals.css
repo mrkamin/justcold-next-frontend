@@ -4,3 +4,7 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+
+.clip-path-wave {
+  clip-path: ellipse(50% 100% at 50% 100%);
+}

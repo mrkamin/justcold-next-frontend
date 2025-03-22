@@ -1,12 +1,12 @@
 import Image from "next/image"
 import { FaAngleDoubleRight } from "react-icons/fa"
-import AboutImage from './assets/WhatsApp Image 2024-10-12 at 01.24.50_74210af3.jpg';
-import AboutPngLogo from './assets/justcold-high-resolution-logo-transparent (1).png';
+import AboutImage from '../../public/assets/WhatsApp Image 2024-10-12 at 01.24.50_74210af3.jpg';
+import AboutPngLogo from '../../public/assets/justcold-high-resolution-logo-transparent (1).png';
 
 const About = () => {
   return (
     <div className="w-full">
-    <div className="grid grid-cols-1 lg:grid-cols-2 w-[90%] gap-5 p-5"
+    <div className="grid grid-cols-1 lg:grid-cols-2 w-full lg:w-[90%] gap-5 p-5"
     >
       <div className="grid grid-cols-[5%_15%_15%_5%_10%_10%_3%_3%_14%_14%_3%_3%] 
       grid-rows-[5%_10%_10%_2.5%_4.3%_10%_10%_10%_18%_3%_15%_2%]">
@@ -47,7 +47,7 @@ const About = () => {
   </div>
 </div>
       <div className="flex flex-col gap-5">
-        <h1>About Us</h1>
+        <h1 className="text-3xl font-bold ">About Us</h1>
         <h3>Professional expertise in Referigeration.</h3>
         <p>Here at JustCold Referigeration, we 
             believe in professionalism, and keeping 
@@ -60,7 +60,7 @@ const About = () => {
             Referigeration with one of their most valuable 
             assets. just some of our services:
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-10">
             <div className="flex gap-3">
                 <FaAngleDoubleRight />
                 <h1>building Cold Room</h1>
