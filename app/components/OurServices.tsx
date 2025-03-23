@@ -1,7 +1,6 @@
 import Image from "next/image"
 import { Data } from "../Data"
 import { BiArrowToRight } from "react-icons/bi"
-import OurService from "../../public/assets/WhatsApp Image 2024-10-12 at 01.24.50_74210af3.jpg";
 
 const OurServices = () => {
   return (

@@ -14,7 +14,7 @@ const HeroTitle = () => {
 </h1>
 
 <p className="text-white text-lg">
-  At JustCold Refrigeration LTD, we put our clients first by upholding the highest industry standards through expertise, courtesy, and professionalism. You'll be amazed by the results and glad you chose us—here are just some of our services:
+  At JustCold Refrigeration LTD, we put our clients first by upholding the highest industry standards through expertise, courtesy, and professionalism. You&apos;ll be amazed by the results and glad you chose us—here are just some of our services:
 </p>
 
       <div>
