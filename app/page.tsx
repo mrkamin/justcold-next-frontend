@@ -4,6 +4,7 @@ import HeroTitle from "./components/HeroTitle";
 import Navbar from "./components/Navbar";
 import NavUpperHead from "./components/NavUpperHead";
 import OurServices from "./components/OurServices";
+import Testemonials from "./components/Testemonials";
 import Video from "./components/Video";
 
 
@@ -17,6 +18,7 @@ export default function Home() {
       <About />
       <OurServices />
       <GetReady />
+      <Testemonials />
     </div>
   );
 }
