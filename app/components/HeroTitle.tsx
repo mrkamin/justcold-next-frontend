@@ -9,7 +9,7 @@ const HeroTitle = () => {
       >
         JUSTCOLD REFRIGERATION, MAINTENANCE & MORE
       </p>
-      <h1 className="text-white text-7xl font-semibold">
+      <h1 className="text-white md:text-4xl lg:text-7xl font-semibold">
         Restore Your Pool&apos;s 
         <span className="text-[#24b8eb]">
           Beauty

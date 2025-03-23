@@ -149,20 +149,84 @@ const OurServices = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-2">
           <div className="flex gap-2 p-2 w-full shadow-md bg-white">
-            <Image src={OurService} alt="ourserviceimg" className="w-full" width={250} height={40} />
-            <Image src={OurService} alt="ourserviceimg" className="w-full" width={250} height={40} />
+          <div className="relative w-full h-40">
+        <Image
+          src={OurService}
+          alt="ourserviceimg"
+          fill // fills parent container
+          objectFit="cover" // maintains aspect ratio while covering container
+          className="rounded"
+        />
+      </div>
+      <div className="relative w-full h-40">
+        <Image
+          src={OurService}
+          alt="ourserviceimg"
+          fill
+          objectFit="cover"
+          className="rounded"
+        />
+      </div>  
           </div>
           <div className="flex gap-2 p-2 w-full shadow-md bg-white">
-            <Image src={OurService} alt="ourserviceimg" className="w-full" width={250} height={40} />
-            <Image src={OurService} alt="ourserviceimg" className="w-full" width={250} height={40} />
+          <div className="relative w-full h-40">
+        <Image
+          src={OurService}
+          alt="ourserviceimg"
+          fill // fills parent container
+          objectFit="cover" // maintains aspect ratio while covering container
+          className="rounded"
+        />
+      </div>
+      <div className="relative w-full h-40">
+        <Image
+          src={OurService}
+          alt="ourserviceimg"
+          fill
+          objectFit="cover"
+          className="rounded"
+        />
+      </div>  
           </div>
           <div className="flex gap-2 p-2 w-full shadow-md bg-white">
-            <Image src={OurService} alt="ourserviceimg" className="w-full" width={250} height={40} />
-            <Image src={OurService} alt="ourserviceimg" className="w-full" width={250} height={40} />
+          <div className="relative w-full h-40">
+        <Image
+          src={OurService}
+          alt="ourserviceimg"
+          fill // fills parent container
+          objectFit="cover" // maintains aspect ratio while covering container
+          className="rounded"
+        />
+      </div>
+      <div className="relative w-full h-40">
+        <Image
+          src={OurService}
+          alt="ourserviceimg"
+          fill
+          objectFit="cover"
+          className="rounded"
+        />
+      </div>  
           </div>
           <div className="flex gap-2 p-2 w-full shadow-md bg-white">
-            <Image src={OurService} alt="ourserviceimg" className="w-full" width={250} height={40} />
-            <Image src={OurService} alt="ourserviceimg" className="w-full" width={250} height={40} />
+          <div className="relative w-full h-40">
+        <Image
+          src={OurService}
+          alt="ourserviceimg"
+          fill // fills parent container
+          objectFit="cover" // maintains aspect ratio while covering container
+          className="rounded"
+        />
+      </div>
+      <div className="relative w-full h-40">
+        <Image
+          src={OurService}
+          alt="ourserviceimg"
+          fill
+          objectFit="cover"
+          className="rounded"
+        />
+      </div>  
           </div>
         </div>
       </div>
