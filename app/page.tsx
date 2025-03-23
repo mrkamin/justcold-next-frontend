@@ -1,4 +1,5 @@
 import About from "./components/About";
+import GetReady from "./components/GetReady";
 import HeroTitle from "./components/HeroTitle";
 import Navbar from "./components/Navbar";
 import NavUpperHead from "./components/NavUpperHead";
@@ -15,6 +16,7 @@ export default function Home() {
       <HeroTitle />
       <About />
       <OurServices />
+      <GetReady />
     </div>
   );
 }

@@ -103,7 +103,7 @@ const OurServices = () => {
           src="https://drive.google.com/file/d/17lUTtdIINr8VgYtJxwwMhAeTthUB7R51/preview" 
           style={{ 
             width: "100%", 
-            height: "100%", 
+            height: "60vh", 
           }}
           title="Embedded Video"
           allow="autoplay"
