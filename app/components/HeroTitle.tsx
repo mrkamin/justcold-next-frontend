@@ -4,27 +4,22 @@ const HeroTitle = () => {
                     sm:w-[100%] md:w-[80%] lg:w-[50%]
                     flex flex-col gap-2 z-30 p-5"
     >
-      <p className="bg-gradient-to-r from-blue-800 to-[#24b8eb] text-white p-2 
+      <p className="bg-gradient-to-r from-[#001f3f] to-[#24b8eb] text-white p-2 
                     rounded-[0.5rem] w-fit"
       >
         JUSTCOLD REFRIGERATION, MAINTENANCE & MORE
       </p>
       <h1 className="text-white md:text-4xl lg:text-7xl font-semibold">
-        Restore Your Pool&apos;s 
-        <span className="text-[#24b8eb]">
-          Beauty
-        </span>
-      </h1>
-      <p className="text-white text-lg">
-        Here at JustCold Refrigeration LTD, we strive in making our clients
-        a top priority, keeping with high industry standards, knowledge,
-        courtesy, and professionalism. You&apos;ll be so Amazed with the results!, 
-        and Happy you chose us!
-        just some of our services
-      </p>
+  Revive Your Cold Room&apos;s <span className="text-[#24b8eb]">Beauty</span>
+</h1>
+
+<p className="text-white text-lg">
+  At JustCold Refrigeration LTD, we put our clients first by upholding the highest industry standards through expertise, courtesy, and professionalism. You'll be amazed by the results and glad you chose us—here are just some of our services:
+</p>
+
       <div>
         <button className="bg-[#24b8eb] text-white px-4 py-2 rounded-lg 
-                           hover:bg-blue-600 transition"
+                           hover:bg-blue-600 transition courser-pointer"
         >
             Get a Free Estimation
         </button>

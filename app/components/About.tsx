@@ -1,55 +1,53 @@
 import Image from "next/image"
 import { FaAngleDoubleRight } from "react-icons/fa"
-import AboutImage from '../../public/assets/WhatsApp Image 2024-10-12 at 01.24.50_74210af3.jpg';
-import AboutPngLogo from '../../public/assets/justcold-high-resolution-logo-transparent (1).png';
 
 const About = () => {
   return (
     <div className="w-full">
-    <div className="grid grid-cols-1 lg:grid-cols-2 w-full lg:w-[90%] gap-5 p-5"
+    <div className="grid grid-cols-1 h-[100%] lg:grid-cols-2 w-full lg:w-[90%] gap-5 p-5"
     >
-      <div className="grid grid-cols-[5%_15%_15%_5%_10%_10%_3%_3%_14%_14%_3%_3%] 
-      grid-rows-[5%_10%_10%_2.5%_4.3%_10%_10%_10%_18%_3%_15%_2%]">
-  <div className="col-start-1 col-end-7 row-start-1 row-end-10">
-    <Image src={AboutImage} alt="AboutImage" 
-    objectFit="cover"
-    className="rounded-[0.5rem]"
-    style={{ 
-            width: "100%", 
-            height: "100%", 
-            
-          }}/>
+      <div className="h-[60vh] grid grid-cols-[5%_15%_15%_5%_10%_10%_3%_3%_14%_14%_3%_3%] 
+      grid-rows-[2%_10%_10%_2%_19%_19%_2%_10%_8%_2%_14%_2%]">
+  <div className="col-start-1 col-end-7 row-start-1 row-end-10 bg-green-900">
+  <Image 
+    src="https://res.cloudinary.com/dagjuuf4v/image/upload/v1742709911/WhatsApp_Image_2024-10-12_at_01.24.50_af9ef241_vjlgzi.jpg" 
+    alt="AboutImage" 
+    width={500} 
+    height={100}
+    className="h-[100%] w-full object-cover"
+  />
   </div>
-  <div className="col-start-8 col-end-11 row-start-2 row-end-4
-                  bg-gradient-to-r from-blue-800 to-[#24b8eb] 
+  <div className="col-start-8 col-end-12 row-start-2 row-end-4
+                  bg-gradient-to-r from-[#001f3f] to-[#24b8eb] 
                   flex flex-col rounded-[0.5rem] place-items-center justify-center text-white">
     <h1 className="text-2xl font-bold">10 +</h1>
     <p>Work Experience</p>
   </div>
   <div className="col-start-2 col-end-4 row-start-11 
                   row-end-12 place-items-center w-full">
-      <Image src={AboutPngLogo} alt="AboutPnglogo" />
+      <Image src="https://res.cloudinary.com/dagjuuf4v/image/upload/v1742710425/justcold-high-resolution-logo_w8hh6u.png" 
+              alt="AboutPnglogo"
+              width={500} 
+    height={600}
+    objectFit="cover"
+    className="rounded-[0.5rem] h-[100%]" />
   </div>
-  <div className="col-start-5 col-end-12 row-start-5 row-end-13 
-                  border-t-[20px] border-l-[20px] rounded-[10px] border-white">
-        <iframe 
-          src="https://drive.google.com/file/d/17lUTtdIINr8VgYtJxwwMhAeTthUB7R51/preview" 
-          style={{ 
-            width: "100%", 
-            height: "100%", 
-            
-          }}
-          title="Embedded Video"
-          allow="autoplay"
-          allowFullScreen
-          frameBorder="0"
-        ></iframe>
+  <div className="col-start-5 col-end-13 row-start-5 row-end-13 
+                  border-t-[10px] border-l-[10px] rounded-[5px] border-white">
+    <video
+        className="inset-0 w-full h-[100%] object-cover"
+        src="https://res.cloudinary.com/dagjuuf4v/video/upload/v1742707733/WhatsApp_Video_2024-10-12_at_01.25.00_0a522a28_crrcnf.mp4"
+        controls
+        autoPlay
+        loop
+        muted
+      />
   </div>
-</div>
-      <div className="flex flex-col gap-5">
-        <h1 className="text-3xl font-bold ">About Us</h1>
-        <h3>Professional expertise in Referigeration.</h3>
-        <p>Here at JustCold Referigeration, we 
+     </div>
+      <div className="flex flex-col gap-3 p-5">
+        <h1 className="text-xl font-bold ">About Us</h1>
+        <h3 className="font-bold">Professional expertise in Referigeration.</h3>
+        <p className="text-gray-500">Here at JustCold Referigeration, we 
             believe in professionalism, and keeping 
             standards high, explaining everything 
             clearly ensuring confidence. we&apos;ll spend as 
@@ -72,31 +70,7 @@ const About = () => {
             <div className="flex gap-3">
                 <FaAngleDoubleRight />
                 <h1>building Cold Room</h1>
-            </div>
-            <div className="flex gap-3">
-                <FaAngleDoubleRight />
-                <h1>building Cold Room</h1>
-            </div>
-            <div className="flex gap-3">
-                <FaAngleDoubleRight />
-                <h1>building Cold Room</h1>
-            </div>
-            <div className="flex gap-3">
-                <FaAngleDoubleRight />
-                <h1>building Cold Room</h1>
-            </div>
-            <div className="flex gap-3">
-                <FaAngleDoubleRight />
-                <h1>building Cold Room</h1>
-            </div>
-            <div className="flex gap-3">
-                <FaAngleDoubleRight />
-                <h1>building Cold Room</h1>
-            </div>
-            <div className="flex gap-3">
-                <FaAngleDoubleRight />
-                <h1>building Cold Room</h1>
-            </div>
+            </div> 
         </div>
       </div>
     </div>

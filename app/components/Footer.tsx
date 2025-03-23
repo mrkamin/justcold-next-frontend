@@ -1,12 +1,15 @@
 "use client";
 
 import Image from "next/image";
+import { BiLocationPlus } from "react-icons/bi";
+import { MdEmail } from "react-icons/md";
+import { PiPhone } from "react-icons/pi";
 
 export default function Footer() {
   return (
     <div className="relative w-full">
       {/* Consultation Section */}
-      <section className="bg-gradient-to-b from-blue-500 to-blue-300 py-12 px-4">
+      <section className=" relative bg-gradient-to-b from-blue-500 to-blue-300 py-12 px-4">
         <div className="max-w-5xl mx-auto flex flex-col items-center gap-6">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white text-center">
             Get A Full Consultation – Absolutely Free!
@@ -48,41 +51,35 @@ export default function Footer() {
             </div>
           </form>
         </div>
+       
       </section>
 
-      {/* Wave SVG (Bottom of Form) */}
-      <div className="absolute -bottom-1 w-full h-[120px] overflow-hidden">
-        <svg
-          className="w-full h-full"
-          viewBox="0 0 1440 320"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill="#ffffff"
-            fillOpacity="1"
-            d="M0,96L60,117.3C120,139,240,181,360,186.7C480,192,600,160,720,144C840,128,960,128,1080,138.7C1200,149,1320,171,1380,181.3L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
-          />
-        </svg>
-      </div>
+     
 
       {/* Footer */}
-      <footer className="bg-[#024873] text-white pt-20 pb-8 mt-[120px] relative">
+      <footer className="bg-[#024873] text-white pt-20 pb-8 relative">
         <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo & Contact */}
           <div className="col-span-1 flex flex-col items-start gap-4">
             {/* Replace with your actual logo */}
             <Image
-              src="/logo.png"
+              src="https://res.cloudinary.com/dagjuuf4v/image/upload/v1742710425/justcold-high-resolution-logo_w8hh6u.png"
               alt="Logo"
               width={150}
               height={80}
               className="object-contain"
             />
-            <p className="mt-2">
-              <span className="font-bold">623 341 2125</span>
-            </p>
-            <p>info@newwavepool.com</p>
-            <p>Address line goes here</p>
+            <div className="flex gap-2 items-center text-white mt-2">
+              <PiPhone />
+              <span className="">+44 7891 673331</span>
+            </div>
+            <div className="flex gap-2 items-center text-white mt-2">
+              <MdEmail />
+              <span className="">info@justcold.co.uk</span>
+            </div><div className="flex gap-2 items-center text-white mt-2">
+              <BiLocationPlus />
+              <span className="">Leicester LE4 9HA</span>
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -101,12 +98,11 @@ export default function Footer() {
           <div className="col-span-1 flex flex-col gap-2">
             <h3 className="text-lg font-semibold mb-2">Services</h3>
             <ul className="space-y-1">
-              <li>Tile Cleaning</li>
-              <li>Acid Washes</li>
-              <li>Pool Repair</li>
-              <li>Rusty Rebar Spots</li>
-              <li>Equipment Maintenance</li>
-              <li>Pool Inspections</li>
+              <li>Cold Room Building</li>
+              <li>Installing Equipment</li>
+              <li>Repeairing Equipment</li>
+              <li>Maintainance Equipmetn</li>
+              <li>Frege Gas Filling</li>
             </ul>
           </div>
 
@@ -121,7 +117,7 @@ export default function Footer() {
 
         {/* Footer Bottom */}
         <div className="mt-8 text-center text-sm border-t border-white/20 pt-4">
-          © 2023 New Wave Pool Tile Cleaning LLC. All Rights Reserved.
+          © 2025 JustCold Referegeration LTD. All Rights Reserved.
         </div>
       </footer>
     </div>

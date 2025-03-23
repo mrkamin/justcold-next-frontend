@@ -5,7 +5,7 @@ import OurService from "../../public/assets/WhatsApp Image 2024-10-12 at 01.24.5
 
 const OurServices = () => {
   return (
-    <div className="place-items-center bg-blue-100 ">
+    <div className="place-items-center bg-blue-100 py-10">
       <div className="flex flex-col gap-5 w-full md:w-[90%] lg:w-[80%]
                       items-center">
         <div className="flex gap-5 justify-between w-full">
@@ -33,7 +33,7 @@ const OurServices = () => {
                   </svg>
               </h2>
              </div>
-             <p>Comperhensive Referigeration & Maintenance Services</p>
+             <p className="text-gray-900">Comperhensive Referigeration & Maintenance Services</p>
             </div>
             <div className="btn">
               <button className="bg-[#24b8eb] text-white px-4 py-2 rounded-lg 
@@ -48,7 +48,7 @@ const OurServices = () => {
             <div key={item.id} className="flex flex-col gap-1 bg-white">
               <div className="w-full">
                 <Image 
-                  src={OurService} 
+                  src={item.image} 
                   alt="AboutImage" 
                   width={250} 
                   height={50} 
@@ -98,19 +98,34 @@ const OurServices = () => {
     make us different than others. Watch our team in action and experience the difference!
   </p>
 </div>
-<div className="">
-<iframe 
-          src="https://drive.google.com/file/d/17lUTtdIINr8VgYtJxwwMhAeTthUB7R51/preview" 
-          style={{ 
-            width: "100%", 
-            height: "60vh", 
-          }}
-          title="Embedded Video"
-          allow="autoplay"
-          allowFullScreen
-          frameBorder="0"
-        ></iframe>
+<div className="relative w-full h-[50vh] border-4 border-[#24b8eb] rounded-lg overflow-hidden">
+  {/* Video */}
+  <video
+    className="w-full h-full object-cover"
+    src="https://res.cloudinary.com/dagjuuf4v/video/upload/v1742704074/wdercm9wgx6cqiepl1nb.mp4"
+    controls
+    loop
+    muted
+  />
+
+  {/* Custom Play Overlay (Optional for styling) */}
+  <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none gap-2">
+    {/* Circle Icon Container */}
+    <div className="bg-white/80 rounded-full p-3">
+      <svg
+        className="w-12 h-12 text-[#24b8eb]"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path d="M8 5v14l11-7z" />
+      </svg>
+    </div>
+    <p className="text-white font-bold drop-shadow-sm">
+      Press Play to See the Results!
+    </p>
+  </div>
 </div>
+
         </div>
         <div className="flex gap-5 justify-between w-full">
           <div className="flex flex-col gap-2">
@@ -151,7 +166,7 @@ const OurServices = () => {
           <div className="flex gap-2 p-2 w-full shadow-md bg-white">
           <div className="relative w-full h-40">
         <Image
-          src={OurService}
+          src="https://res.cloudinary.com/dagjuuf4v/image/upload/v1742726726/5_zwlia7.png"
           alt="ourserviceimg"
           fill // fills parent container
           objectFit="cover" // maintains aspect ratio while covering container
@@ -160,7 +175,7 @@ const OurServices = () => {
       </div>
       <div className="relative w-full h-40">
         <Image
-          src={OurService}
+          src="https://res.cloudinary.com/dagjuuf4v/image/upload/v1742726725/6_pwaz1q.jpg"
           alt="ourserviceimg"
           fill
           objectFit="cover"
@@ -171,7 +186,7 @@ const OurServices = () => {
           <div className="flex gap-2 p-2 w-full shadow-md bg-white">
           <div className="relative w-full h-40">
         <Image
-          src={OurService}
+          src="https://res.cloudinary.com/dagjuuf4v/image/upload/v1742726724/7_zbtimi.jpg"
           alt="ourserviceimg"
           fill // fills parent container
           objectFit="cover" // maintains aspect ratio while covering container
@@ -180,7 +195,7 @@ const OurServices = () => {
       </div>
       <div className="relative w-full h-40">
         <Image
-          src={OurService}
+          src="https://res.cloudinary.com/dagjuuf4v/image/upload/v1742726725/8_tkgo9t.jpg"
           alt="ourserviceimg"
           fill
           objectFit="cover"
@@ -191,7 +206,7 @@ const OurServices = () => {
           <div className="flex gap-2 p-2 w-full shadow-md bg-white">
           <div className="relative w-full h-40">
         <Image
-          src={OurService}
+          src="https://res.cloudinary.com/dagjuuf4v/image/upload/v1742726724/2_zibvmn.jpg"
           alt="ourserviceimg"
           fill // fills parent container
           objectFit="cover" // maintains aspect ratio while covering container
@@ -200,7 +215,7 @@ const OurServices = () => {
       </div>
       <div className="relative w-full h-40">
         <Image
-          src={OurService}
+          src="https://res.cloudinary.com/dagjuuf4v/image/upload/v1742726723/4_vbrd4v.avif"
           alt="ourserviceimg"
           fill
           objectFit="cover"
@@ -211,7 +226,7 @@ const OurServices = () => {
           <div className="flex gap-2 p-2 w-full shadow-md bg-white">
           <div className="relative w-full h-40">
         <Image
-          src={OurService}
+          src="https://res.cloudinary.com/dagjuuf4v/image/upload/v1742726724/3_f4o1ka.jpg"
           alt="ourserviceimg"
           fill // fills parent container
           objectFit="cover" // maintains aspect ratio while covering container
@@ -220,7 +235,7 @@ const OurServices = () => {
       </div>
       <div className="relative w-full h-40">
         <Image
-          src={OurService}
+          src="https://res.cloudinary.com/dagjuuf4v/image/upload/v1742726620/WhatsApp_Image_2024-10-12_at_01.24.57_34f8328f_oygbpc.jpg"
           alt="ourserviceimg"
           fill
           objectFit="cover"

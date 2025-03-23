@@ -7,7 +7,7 @@ import OurServices from "./components/OurServices";
 import PricingPremiumSection from "./components/PriceingPremiumSection";
 import Testemonials from "./components/Testemonials";
 import Video from "./components/Video";
-import Footer from "./Footer";
+import Footer from "./components/Footer";
 
 
 export default function Home() {

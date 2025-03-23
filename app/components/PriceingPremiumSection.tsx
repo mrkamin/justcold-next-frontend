@@ -1,14 +1,14 @@
 export default function PricingPremiumSection() {
     return (
-      <section className="w-full flex flex-col items-center px-4 py-16 bg-white">
+      <div className="w-full flex flex-col items-center px-4  bg-white">
         {/* Heading */}
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-2">
-          Affordable Pricing for Premium Pool Care
+          Affordable Pricing for Premium Cold Room Care
         </h2>
         {/* Subheading */}
         <p className="text-center text-gray-600 max-w-2xl mb-10">
-          Why choose inexperience? Trust New Wave Pool Tile Cleaning LLC will
-          competitively satisfy all of your pool needs.
+          Why choose inexperience? Trust JustCold Referigeration & Maintainence will
+          competitively satisfy all of your Referigeration needs.
         </p>
   
         {/* Container for the line and items */}
@@ -65,7 +65,7 @@ export default function PricingPremiumSection() {
               </svg>
             </div>
             <h3 className="font-semibold text-md md:text-lg text-gray-800">
-              Over 25 Years of Experience
+              Over 10 Years of Experience
             </h3>
           </div>
   
@@ -103,7 +103,7 @@ export default function PricingPremiumSection() {
             </h3>
           </div>
         </div>
-      </section>
+      </div>
     );
   }
   
