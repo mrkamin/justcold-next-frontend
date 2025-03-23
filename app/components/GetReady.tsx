@@ -1,7 +1,6 @@
 import Image from "next/image";
 import GetReadyphoto from "../../public/assets/WhatsApp Image 2024-10-12 at 01.24.50_74210af3.jpg";
 import { FaAngleDoubleRight } from "react-icons/fa";
-import OurService from "../../public/assets/WhatsApp Image 2024-10-12 at 01.24.50_74210af3.jpg";
 
 const GetReady = () => {
   return (
