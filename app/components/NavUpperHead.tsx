@@ -1,3 +1,4 @@
+import { JSX } from "react";
 import { GiBubbles } from "react-icons/gi";
 import { PiPhoneCall } from "react-icons/pi";
 import { TfiEmail } from "react-icons/tfi";
