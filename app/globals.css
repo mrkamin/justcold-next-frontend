@@ -43,14 +43,13 @@ body {
 /* NavUpperHead Styles */
 .nav-upper {
   @apply bg-gradient-to-r from-[#1f1f38] 
-  to-[#4db5ff] h-18 md:h-12 flex 
-  justify-center w-full;
+  to-[#4db5ff] h-18 sm:h-12 flex 
+  justify-center w-full z-2 ;
 }
 
 .nav-container {
-  @apply flex justify-between items-center 
-  lg:w-[90%] 
-  text-white;
+  @apply flex justify-between
+  items-center w-[90%] text-white;
 }
 
 .bubble-icon {
@@ -82,16 +81,17 @@ body {
   position: sticky;
   top: 0;
   transition: var(--transition);
+  z-index: 900;
 }
 
 .navbar {
   @apply flex flex-col items-center
-  w-full z-40 top-18 md:top-12
+  w-full top-18 md:top-12 p-1
 }
 
 .navbar.scrolled {
   @apply bg-gradient-to-r from-[#1f1f38]
-  to-[#4db5ff] shadow-lg z-900 
+  to-[#4db5ff] shadow-lg z-0
 }
 .navbar.scrolled {
   box-shadow: var(--shadow);
@@ -106,7 +106,7 @@ body {
 }
 
 .logo-container {
-  @apply z-20 bg-[#1f1f38] 
+  @apply z-2 bg-[#1f1f38] 
   rounded-full p-1 
   hover:bg-[#1f1f3890]
   cursor-pointer
@@ -117,7 +117,7 @@ body {
 
 .menu-button {
   @apply md:hidden text-white 
-  z-50 relative p-1 bg-[#1f1f38] 
+  z-2 relative p-1 bg-[#1f1f38] 
   rounded-full h-fit text-2xl
   hover:bg-[#1f1f3890] cursor-pointer
   transition-all duration-500
@@ -126,28 +126,35 @@ body {
 
 .nav-links {
   @apply absolute md:static
-  pt-25 pb-25 px-2 
-  md:px-0 md:pb-0 md:pt-0 
+  pt-25 pb-2 px-2 md:p-2  
   top-0 left-0 w-full md:w-fit
-  bg-[#4db5ff] md:bg-transparent
-  transition-transform duration-500 
-  ease-in-out md:flex md:gap-2 
-  md:items-center;
+  bg-gradient-to-r from-[#1f1f38] 
+  to-[#4db5ff] transition-transform 
+  duration-500 ease-in-out md:flex 
+  md:gap-2 md:items-center z-1
+  md:bg-transparent;
 }
 
+@media (min-width: 768px) {
+  .nav-links {
+    background: transparent !important;
+  }
+}
+
+
 .nav-links-open {
-  @apply translate-x-0;
+  @apply translate-y-0;
 }
 
 .nav-links-closed {
-  @apply -translate-x-full 
-  md:translate-x-0;
+  @apply -translate-y-150 
+  md:translate-y-0;
 }
 
 .menu-list {
   @apply flex flex-col 
   md:flex-row  gap-5
-  bg-[#4db5ff] text-white 
+  text-white 
   p-2 rounded-lg ;
 }
 
@@ -155,7 +162,7 @@ body {
   @apply hover:text-gray-300 
   cursor-pointer rounded-md 
   md:text-center w-fit text-lg 
-  md:text-sm lg:text-lg;
+  md:text-sm lg:text-xl;
 }
 
 .estimate-btn {

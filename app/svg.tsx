@@ -4,8 +4,8 @@ export const SvgLogo = () => (
       viewBox="100 25 200 200"
       data-background-color="#40c5f2"
       preserveAspectRatio="xMidYMid meet"
-      height="90"
-      width="90"
+      height="70"
+      width="70"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       

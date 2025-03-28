@@ -1,7 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import { SvgLogo } from "../svg";
 import { FiMenu, FiX } from "react-icons/fi";
 
@@ -10,11 +8,6 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    // Initialize AOS when the component mounts
-    AOS.init({
-      duration: 800, // Animation duration in ms
-    });
-
     const handleScroll = () => {
       if (window.scrollY > 0) {
         setIsScrolled(true);
