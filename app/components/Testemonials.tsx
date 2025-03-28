@@ -1,4 +1,3 @@
-"use client";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
