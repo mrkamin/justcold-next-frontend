@@ -1,34 +1,28 @@
-import { GiBubbles } from "react-icons/gi"
-import { PiPhoneCall } from "react-icons/pi"
-import { TfiEmail } from "react-icons/tfi"
+import { JSX } from "react";
+import { GiBubbles } from "react-icons/gi";
+import { PiPhoneCall } from "react-icons/pi";
+import { TfiEmail } from "react-icons/tfi";
 
 const NavUpperHead = () => {
   return (
-    <nav className="bg-gradient-to-r from-[#001f3f] to-[#24b8eb] h-[12rem] md:h-[2rem]
-                    hidden md:flex justify-center w-full">
-        <div className="flex flex-col sm:flex-row justify-between h-[12rem] md:h-[2rem] items-center 
-                        md:w-[90%] lg:w-[80%]">
-            <div className="text-white text-xl">
-                <GiBubbles className="" />
-            </div>
-            <div className="flex flex-col sm:flex-row gap-5 items-center text-white">
-                <div className="flex flex-col sm:flex-row gap-3 items-center">
-                    <div className="border border-white rounded-[50%] p-1">
-                        <PiPhoneCall  />
-                    </div>
-                    <p>+44 7891 673331</p>
-                </div>
-                <hr className="transform rotate-90 w-[1.5rem] h-[1px]"/>
-                <div className="flex flex-col sm:flex-row gap-3 items-center">
-                    <div className="border border-white rounded-[50%] p-1">
-                     <TfiEmail />
-                    </div>
-                    <p>info@justcold.co.uk</p>
-                </div>
-            </div>
+    <nav className="nav-upper">
+      <div className="nav-container">
+        <GiBubbles className="bubble-icon" />
+        <div className="contact-wrapper">
+          <ContactItem icon={<PiPhoneCall />} text="+44 7891 673331" />
+          <span className="divider" />
+          <ContactItem icon={<TfiEmail />} text="info@justcold.co.uk" />
         </div>
+      </div>
     </nav>
-  )
-}
+  );
+};
 
-export default NavUpperHead
+const ContactItem = ({ icon, text }: { icon: JSX.Element; text: string }) => (
+  <div className="contact-item">
+    <div className="contact-icon">{icon}</div>
+    <p>{text}</p>
+  </div>
+);
+
+export default NavUpperHead;

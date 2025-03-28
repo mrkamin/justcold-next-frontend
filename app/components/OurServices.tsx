@@ -1,10 +1,22 @@
+"use client"
+import AOS from 'aos'
 import Image from "next/image"
 import { Data } from "../Data"
 import { BiArrowToRight } from "react-icons/bi"
+import { useEffect } from "react";
+
+import "aos/dist/aos.css";
 
 const OurServices = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+    });
+  }, []);
+  
   return (
-    <div className="place-items-center bg-blue-100 py-10">
+    <div className="place-items-center bg-blue-100 py-10" data-aos="fade-up">
       <div className="flex flex-col gap-5 w-full md:w-[90%] lg:w-[80%]
                       items-center">
         <div className="flex gap-5 justify-between w-full">
