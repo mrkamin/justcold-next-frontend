@@ -81,22 +81,27 @@ body {
   position: sticky;
   top: 0;
   z-index: 900;
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  transition: var(--transition);
+  
 }
 
 .navbar {
   @apply flex flex-col items-center
   w-full top-18 md:top-12 p-1
-  transition-all duration-500 ease-in-out;
+  
 }
 
 .navbar.scrolled {
   @apply bg-gradient-to-r from-[#1f1f38] 
   to-[#4db5ff] shadow-lg;
+  
 }
 
 .navbar.scrolled {
-  box-shadow: var(--shadow);
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
 }
 
 .nav-content {

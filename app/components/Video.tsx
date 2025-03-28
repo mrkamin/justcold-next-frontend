@@ -19,7 +19,7 @@ export default function Video() {
   };
 
   return (
-    <div className="relative w-full h-[90vh] top-[-86]">
+    <div className="relative w-full h-[90vh] top-[-138]">
       {/* Video: fills container */}
       <video
         ref={videoRef}

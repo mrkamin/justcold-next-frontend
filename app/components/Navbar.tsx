@@ -9,7 +9,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
+      if (window.scrollY > 50) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -31,16 +31,16 @@ const Navbar = () => {
             {isOpen ? <FiX /> : <FiMenu />}
           </button>
         </div>
-        <div className={`nav-links ${isOpen ? "nav-links-open" : "nav-links-closed"}`} data-aos="fade-right">
+        <div className={`nav-links ${isOpen ? "nav-links-open" : "nav-links-closed"}`}>
           <ul className="menu-list">
-            <li className="menu-item" data-aos="fade-up">Home</li>
-            <li className="menu-item" data-aos="fade-up">Services</li>
-            <li className="menu-item" data-aos="fade-up">About Us</li>
-            <li className="menu-item" data-aos="fade-up">Gallery</li>
-            <li className="menu-item" data-aos="fade-up">Testimonials</li>
-            <li className="menu-item" data-aos="fade-up">Contact</li>
+            <li className="menu-item">Home</li>
+            <li className="menu-item">Services</li>
+            <li className="menu-item">About Us</li>
+            <li className="menu-item">Gallery</li>
+            <li className="menu-item">Testimonials</li>
+            <li className="menu-item">Contact</li>
           </ul>
-          <button className="estimate-btn" data-aos="zoom-in">Get a Free Estimation</button>
+          <button className="estimate-btn">Get a Free Estimation</button>
         </div>
       </nav>
     </div>
