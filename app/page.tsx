@@ -1,6 +1,5 @@
 import About from "./components/About";
 import GetReady from "./components/GetReady";
-import HeroTitle from "./components/HeroTitle";
 import Navbar from "./components/Navbar";
 import NavUpperHead from "./components/NavUpperHead";
 import OurServices from "./components/OurServices";
@@ -17,7 +16,6 @@ export default function Home() {
       <NavUpperHead />
       <Navbar />
       <Video />
-      <HeroTitle />
       <About />
       <OurServices />
       <GetReady />
