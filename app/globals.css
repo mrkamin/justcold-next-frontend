@@ -181,7 +181,7 @@ body {
   border border-[#4db5ff]
 }
 
-/* global.css */
+/* Video */
 
 .video-container {
   @apply relative w-full h-[90vh] top-[-138];
@@ -208,7 +208,7 @@ body {
   @apply w-12 h-12 text-white;
 }
 
-/* global.css */
+/*Hero-title*/
 
 .hero-title-container {
   @apply absolute top-35 sm:top-30 md:left-5 lg:left-20 
