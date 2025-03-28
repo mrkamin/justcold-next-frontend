@@ -1,9 +1,20 @@
+"use client"
+import AOS from 'aos'
 import Image from "next/image"
 import { FaAngleDoubleRight } from "react-icons/fa"
 
+import "aos/dist/aos.css";
+import { useEffect } from 'react';
+
 const About = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration:  800,
+    })
+  }, [])
   return (
-    <div className="w-full">
+    <div className="w-full" data-aos="fade-up">
     <div className="grid grid-cols-1 h-[100%] lg:grid-cols-2 w-full lg:w-[90%] gap-5 p-5"
     >
       <div className="h-[60vh] grid grid-cols-[5%_15%_15%_5%_10%_10%_3%_3%_14%_14%_3%_3%] 
