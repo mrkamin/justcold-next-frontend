@@ -1,7 +1,7 @@
 "use client"
 import { useRef, useState } from "react";
 
-export default function Video() {
+const Video = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -97,3 +97,5 @@ export default function Video() {
     </div>
   );
 }
+
+export default Video;
