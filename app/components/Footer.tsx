@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import { BiLocationPlus } from "react-icons/bi";
 import { MdEmail } from "react-icons/md";

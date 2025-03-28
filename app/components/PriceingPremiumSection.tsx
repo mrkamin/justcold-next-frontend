@@ -1,4 +1,4 @@
-export default function PricingPremiumSection() {
+const PricingPremiumSection = () => {
     return (
       <div className="w-full flex flex-col items-center px-4  bg-white">
         {/* Heading */}
@@ -107,3 +107,4 @@ export default function PricingPremiumSection() {
     );
   }
   
+  export default PricingPremiumSection;

@@ -1,4 +1,3 @@
-"use client"
 import { useRef, useState } from "react";
 import HeroTitle from "./HeroTitle";
 
@@ -6,15 +5,14 @@ const Video = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
-  const handlePlay = () => setIsPlaying(true);
-  const handlePause = () => setIsPlaying(false);
-
   const togglePlay = () => {
     if (videoRef.current) {
       if (videoRef.current.paused) {
         videoRef.current.play();
+        setIsPlaying(true)
       } else {
         videoRef.current.pause();
+        setIsPlaying(false)
       }
     }
   };
@@ -26,11 +24,10 @@ const Video = () => {
         ref={videoRef}
         className="video-element"
         src="https://res.cloudinary.com/dagjuuf4v/video/upload/v1742704074/wdercm9wgx6cqiepl1nb.mp4"
-        controls
         loop
         muted
-        onPlay={handlePlay}
-        onPause={handlePause}
+        playsInline
+        onClick={togglePlay}
       />
 
       {/* SVG and Play/Pause Button */}

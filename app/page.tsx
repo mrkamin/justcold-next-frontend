@@ -1,27 +1,23 @@
-import About from "./components/About";
-import GetReady from "./components/GetReady";
-import Navbar from "./components/Navbar";
-import NavUpperHead from "./components/NavUpperHead";
-import OurServices from "./components/OurServices";
-import PricingPremiumSection from "./components/PriceingPremiumSection";
-import Testemonials from "./components/Testemonials";
-import Video from "./components/Video";
-import Footer from "./components/Footer";
+"use client"
+import { useEffect } from "react";
+import AOS from 'aos'
+import ComponentOne from "./components/ComponentsOne";
+import ComponentTwo from "./components/ComponentsTwo";
 
+import "aos/dist/aos.css";
 
 export default function Home() {
 
+  useEffect(() => {
+    AOS.init({
+      duration:  800,
+    })
+  }, [])
+  
   return (
     <div className="">
-      <NavUpperHead />
-      <Navbar />
-      <Video />
-      <About />
-      <OurServices />
-      <GetReady />
-      <Testemonials />
-      <PricingPremiumSection />
-      <Footer />
+      <ComponentOne />
+      <ComponentTwo />
     </div>
   );
 }
