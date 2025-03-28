@@ -17,7 +17,6 @@ export default function Home() {
       <NavUpperHead />
       <Navbar />
       <Video />
-      <HeroTitle />
       <About />
       <OurServices />
       <GetReady />
