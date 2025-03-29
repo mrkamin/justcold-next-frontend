@@ -45,7 +45,27 @@ const About = () => {
 
         {/* Text Section */}
         <div className="about-text-container">
-          <h1 className="about-title" data-aos="fade-up">About Us</h1>
+          <h2 className="about-title" data-aos="fade-up">
+            About Us
+          <svg
+                    className="absolute bottom-0 left-0 w-full"
+                    height="10"
+                    viewBox="0 0 200 10"
+                  >
+                    <defs>
+                      <linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%">
+                        <stop offset="0%" stopColor="#002F6C" />  
+                        <stop offset="100%" stopColor="#24B8EB" /> 
+                      </linearGradient>
+                    </defs>
+                    <path
+                      d="M0,5 Q10,0 20,5 T40,5 T60,5 T80,5 T100,5 T120,5 T140,5 T160,5 T180,5 T200,5"
+                      stroke="url(#gradient)"
+                      strokeWidth="2"
+                      fill="none"
+                    />
+                  </svg>
+          </h2>
           <h3 className="about-subtitle" data-aos="fade-up">Professional expertise in Refrigeration.</h3>
           <p className="about-description" data-aos="fade-up">
             Here at JustCold Refrigeration, we believe in professionalism and keeping 
