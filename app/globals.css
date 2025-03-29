@@ -275,15 +275,15 @@ body {
 }
 
 .about-image-container {
-  @apply h-[90vh] grid 
-  grid-cols-[5%_15%_15%_5%_10%_10%_3%_3%_14%_14%_3%_3%] 
-  grid-rows-[2%_10%_10%_2%_19%_19%_2%_10%_8%_2%_14%_2%];
+  @apply sm:h-[90vh] flex flex-col sm:grid gap-2 sm:gap-0
+  sm:grid-cols-[5%_15%_15%_5%_10%_10%_3%_3%_14%_14%_3%_3%] 
+  sm:grid-rows-[2%_10%_10%_2%_19%_19%_2%_10%_8%_2%_14%_2%];
 }
 
 .about-main-image {
-  @apply col-start-1 
-  col-end-7 row-start-1 
-  row-end-10;
+  @apply rounded-lg
+  sm:col-start-1 col-end-7 
+  sm:row-start-1 row-end-10;
 }
 
 .about-main-image img {
@@ -292,16 +292,18 @@ body {
 }
 
 .about-experience {
-  @apply col-start-8 col-end-12 
-  row-start-2 row-end-4
+  @apply h-[20vh] sm:h-[18vh]
+  sm:col-start-8 col-end-12 
+  sm:row-start-2 row-end-4
   bg-gradient-to-r from-[#001f3f] to-[#24b8eb] 
   flex flex-col rounded-[0.5rem] 
   place-items-center justify-center text-white;
 }
 
 .about-logo-container {
-  @apply col-start-2 col-end-4 
-  row-start-11 row-end-12 
+  @apply 
+  sm:col-start-2 col-end-4 
+  sm:row-start-11 row-end-12 
   place-items-center w-full;
 }
 
@@ -310,15 +312,16 @@ body {
 }
 
 .about-video-container {
-  @apply col-start-5 col-end-13 
-  row-start-5 row-end-13 z-2
-  border-t-[5px] border-l-[5px] 
+  @apply rounded-lg w-full
+  sm:col-start-5 col-end-13 
+  sm:row-start-5 row-end-13 z-2
+  sm:border-t-[5px] sm:border-l-[5px] 
   border-white;
 }
 
 .about-video {
-  @apply inset-0 w-full h-[100%] 
-  object-cover;
+  @apply w-full h-[100%] 
+  object-cover rounded-lg;
 }
 
 .about-text-container {

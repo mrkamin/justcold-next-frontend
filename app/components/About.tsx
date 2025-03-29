@@ -7,16 +7,6 @@ const About = () => {
       <div className="about-grid">
         {/* Image and Video Section */}
         <div className="about-image-container">
-          <div className="about-main-image">
-            <Image 
-              src="https://res.cloudinary.com/dagjuuf4v/image/upload/v1742709911/WhatsApp_Image_2024-10-12_at_01.24.50_af9ef241_vjlgzi.jpg" 
-              alt="AboutImage" 
-              width={500} 
-              height={100}
-              className="about-main-image img"
-              data-aos="fade-up"
-            />
-          </div>
           <div className="about-experience" data-aos="fade-up">
             <h1 className="text-2xl font-bold">10 +</h1>
             <p>Work Experience</p>
@@ -28,6 +18,16 @@ const About = () => {
               width={500} 
               height={600}
               className="about-logo"
+              data-aos="fade-up"
+            />
+          </div>
+          <div className="about-main-image">
+            <Image 
+              src="https://res.cloudinary.com/dagjuuf4v/image/upload/v1742709911/WhatsApp_Image_2024-10-12_at_01.24.50_af9ef241_vjlgzi.jpg" 
+              alt="AboutImage" 
+              width={500} 
+              height={100}
+              className="about-main-image img"
               data-aos="fade-up"
             />
           </div>
