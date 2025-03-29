@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { FaAngleDoubleRight } from "react-icons/fa";
-
 const About = () => {
   return (
     <div className="about-container" data-aos="fade-up">
@@ -57,19 +56,43 @@ const About = () => {
             most valuable assets. Just some of our services:
           </p>
 
-          <div className="about-services-grid">
-            <div className="about-service-item" data-aos="fade-up">
+          <div className="about-services-grid" data-aos="fade-up">
+            <div className="about-service-item">
               <FaAngleDoubleRight />
-              <h1>Building Cold Room</h1>
+              <h1>Commercial Refrigeration</h1>
             </div>
-            <div className="about-service-item" data-aos="fade-up">
+            <div className="about-service-item">
               <FaAngleDoubleRight />
-              <h1>Building Cold Room</h1>
+              <h1>Repair and Maintenance</h1>
             </div>
-            <div className="about-service-item" data-aos="fade-up">
+            <div className="about-service-item">
               <FaAngleDoubleRight />
-              <h1>Building Cold Room</h1>
+              <h1>Walk-in Chiller</h1>
             </div> 
+            <div className="about-service-item">
+              <FaAngleDoubleRight />
+              <h1>Freezer (Cold Room)</h1>
+            </div> 
+            <div className="about-service-item">
+              <FaAngleDoubleRight />
+              <h1>Freezer, Upright Fridge </h1>
+            </div> 
+            <div className="about-service-item">
+              <FaAngleDoubleRight />
+              <h1>Freezer, Drink Fridge,</h1>
+            </div> 
+            <div className="about-service-item">
+              <FaAngleDoubleRight />
+              <h1>Cellar Cooler, Ice Maker</h1>
+            </div>
+            <div className="about-service-item">
+              <FaAngleDoubleRight />
+              <h1>Counter Fridge</h1>
+            </div> 
+            <div className="about-service-item">
+              <FaAngleDoubleRight />
+              <h1>Blast Chiller,</h1>
+            </div>  
           </div>
         </div>
       </div>

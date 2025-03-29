@@ -265,13 +265,13 @@ body {
 /* about */
 
 .about-container {
-  @apply w-full;
+  @apply relative w-full flex flex-col items-center;
 }
 
 .about-grid {
   @apply grid grid-cols-1 
   lg:grid-cols-2 w-full 
-  lg:w-[90%] gap-5 p-5;
+  gap-5 p-5;
 }
 
 .about-image-container {
@@ -326,19 +326,21 @@ body {
 
 .about-text-container {
   @apply flex flex-col 
-  gap-3 p-5;
+  gap-5 p-5;
 }
 
 .about-title {
-  @apply text-xl font-bold;
+  @apply text-3xl font-bold
+  text-[#1f1f38];
 }
 
 .about-subtitle {
-  @apply font-bold;
+  @apply text-xl font-bold
+  text-[#1f1f38];
 }
 
 .about-description {
-  @apply text-gray-500;
+  @apply text-gray-900;
 }
 
 .about-services-grid {
@@ -347,5 +349,14 @@ body {
 }
 
 .about-service-item {
-  @apply flex gap-3;
+  @apply flex gap-3 items-center;
+}
+
+.about-service-item svg {
+  @apply text-[#4db5ff];
+}
+
+.about-service-item {
+  @apply text-[#1f1f38]
+  font-bold;
 }
