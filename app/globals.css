@@ -202,7 +202,7 @@ body {
   xl:w-[400px] xl:h-[400px] 
   xl:top-80 
   2xl:w-[600px] 2xl:h-[600px] 
-  2xl:right-80 2xl:top-140 
+  2xl:right-50 2xl:top-120 
   transform -translate-y-1/2 w-fit;
 }
 
