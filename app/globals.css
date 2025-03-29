@@ -194,24 +194,39 @@ body {
 
 .video-overlay {
   @apply absolute pointer-events-none 
-  hidden md:block md:right-50 md:top-100 
-  lg:right-50 z-50 lg:top-80 transform 
-  -translate-y-1/2 w-fit;
+  hidden md:block 
+  md:w-[100px] md:h-[100px] 
+  md:right-50 md:top-110 
+  lg:w-[200px] lg:h-[200px] 
+  lg:right-40 z-50 lg:top-70
+  xl:w-[400px] xl:h-[400px] 
+  xl:right-50 xl:top-90 
+  2xl:w-[600px] 2xl:h-[600px] 
+  2xl:right-90 2xl:top-150 
+  transform -translate-y-1/2 w-fit;
 }
 
 .video-svg {
-  @apply absolute;
+  @apply absolute
+  md:w-[100px] md:h-[100px]
+  lg:w-[200px] lg:h-[200px]
+  xl:w-[400px] xl:h-[400px]
+  2xl:w-[600px] 2xl:h-[600px];
 }
 
 .video-button {
   @apply pointer-events-auto 
   rounded-full w-50 h-50 flex 
   items-center justify-center 
-  cursor-pointer;
+  cursor-pointer
+  md:w-[100px] md:h-[100px] 
+  lg:w-[200px] lg:h-[200px] 
+  xl:w-[400px] xl:h-[400px]
+  2xl:w-[600px] 2xl:h-[600px];
 }
 
 .video-icon {
-  @apply w-12 h-12 text-white;
+  @apply md:w-10 lg:w-20 md:h-10 lg:h-20 text-white;
 }
 
 /*Hero-title*/
