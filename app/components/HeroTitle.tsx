@@ -6,7 +6,7 @@ const HeroTitle = () => {
       </p>
 
       <h1 className="hero-title-heading">
-        Revive Your Cold Room&apos;s <span className="hero-title-highlight">Beauty</span>
+        Keep Things <span className="hero-title-highlight">Fresh</span>
       </h1>
 
       <p className="hero-title-description" style={{ whiteSpace: "pre-line" }}>

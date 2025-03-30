@@ -265,25 +265,26 @@ body {
 /* about */
 
 .about-container {
-  @apply w-full;
+  @apply relative w-full py-5
+  flex flex-col items-center;
 }
 
 .about-grid {
   @apply grid grid-cols-1 
   lg:grid-cols-2 w-full 
-  lg:w-[90%] gap-5 p-5;
+  gap-5 p-5;
 }
 
 .about-image-container {
-  @apply h-[90vh] grid 
-  grid-cols-[5%_15%_15%_5%_10%_10%_3%_3%_14%_14%_3%_3%] 
-  grid-rows-[2%_10%_10%_2%_19%_19%_2%_10%_8%_2%_14%_2%];
+  @apply sm:h-[85vh] flex flex-col sm:grid gap-2 sm:gap-0
+  sm:grid-cols-[5%_15%_15%_5%_10%_10%_3%_3%_14%_14%_3%_3%] 
+  sm:grid-rows-[2%_10%_10%_2%_19%_19%_2%_10%_8%_2%_14%_2%];
 }
 
 .about-main-image {
-  @apply col-start-1 
-  col-end-7 row-start-1 
-  row-end-10;
+  @apply rounded-lg
+  sm:col-start-1 col-end-7 
+  sm:row-start-1 row-end-10;
 }
 
 .about-main-image img {
@@ -292,16 +293,18 @@ body {
 }
 
 .about-experience {
-  @apply col-start-8 col-end-12 
-  row-start-2 row-end-4
+  @apply h-[20vh] sm:h-[18vh]
+  sm:col-start-8 col-end-12 
+  sm:row-start-2 row-end-4
   bg-gradient-to-r from-[#001f3f] to-[#24b8eb] 
   flex flex-col rounded-[0.5rem] 
   place-items-center justify-center text-white;
 }
 
 .about-logo-container {
-  @apply col-start-2 col-end-4 
-  row-start-11 row-end-12 
+  @apply 
+  sm:col-start-2 col-end-4 
+  sm:row-start-11 row-end-12 
   place-items-center w-full;
 }
 
@@ -310,39 +313,53 @@ body {
 }
 
 .about-video-container {
-  @apply col-start-5 col-end-13 
-  row-start-5 row-end-13 z-2
-  border-t-[5px] border-l-[5px] 
+  @apply rounded-lg w-full
+  sm:col-start-5 col-end-13 
+  sm:row-start-5 row-end-13 z-2
+  sm:border-t-[5px] sm:border-l-[5px] 
   border-white;
 }
 
 .about-video {
-  @apply inset-0 w-full h-[100%] 
-  object-cover;
+  @apply w-full h-[100%] 
+  object-cover rounded-lg;
 }
 
 .about-text-container {
   @apply flex flex-col 
-  gap-3 p-5;
+  gap-5 p-2 md:p-15 md:pr-0;
 }
 
 .about-title {
-  @apply text-xl font-bold;
+  @apply text-3xl font-bold 
+  relative inline-block 
+  h-12 text-[#1f1f38] w-fit;
 }
 
 .about-subtitle {
-  @apply font-bold;
+  @apply text-xl font-bold
+  text-[#1f1f38];
 }
 
 .about-description {
-  @apply text-gray-500;
+  @apply text-gray-900;
 }
 
 .about-services-grid {
   @apply grid grid-cols-2 
-  md:grid-cols-3 gap-10;
+  md:grid-cols-3 gap-2;
 }
 
 .about-service-item {
-  @apply flex gap-3;
+  @apply flex gap-3 items-center;
 }
+
+.about-service-item svg {
+  @apply text-[#4db5ff];
+}
+
+.about-service-item {
+  @apply text-[#1f1f38]
+  font-bold;
+}
+
