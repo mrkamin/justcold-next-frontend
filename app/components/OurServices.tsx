@@ -15,13 +15,18 @@ const OurServices = () => {
   }, []);
   
   return (
-    <div className="place-items-center bg-blue-100 py-10" data-aos="fade-up">
+    <div className="place-items-center 
+                    bg-blue-100 py-10
+                    px-2 relative 
+                    ourservices-container" data-aos="fade-up">
       <div className="flex flex-col gap-5 w-full md:w-[90%] lg:w-[80%]
                       items-center">
-        <div className="flex gap-5 justify-between w-full">
-            <div className="flex flex-col gap-2">
-             <div className="">
-              <h2 className="text-3xl font-bold relative inline-block h-12">
+        <div className="flex flex-col md:flex-row
+                        gap-5 justify-between w-full">
+            <div className="flex flex-col gap-2
+                            place-items-center 
+                            md:items-start">
+              <h2 className="text-3xl w-fit font-bold relative inline-block h-12">
                 Our Services
                   <svg
                     className="absolute bottom-0 left-0 w-full"
@@ -42,16 +47,11 @@ const OurServices = () => {
                     />
                   </svg>
               </h2>
-             </div>
-             <p className="text-gray-900">Comperhensive Referigeration & Maintenance Services</p>
+              <p className="text-gray-900">Comperhensive Referigeration & Maintenance Services</p>
             </div>
-            <div className="btn">
-              <button className="bg-[#24b8eb] text-white px-4 py-2 rounded-lg 
-                                 hover:bg-blue-600 transition"
-              >
+              <button className="estimate-btn h-fit">
                 REQUEST A FREE ESTIMATE
               </button>
-            </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {Data.map((item) => (
