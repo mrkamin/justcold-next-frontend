@@ -3,7 +3,7 @@ import { FaAngleDoubleRight } from "react-icons/fa";
 
 const GetReady = () => {
   return (
-    <div className="flex flex-col gap-5 w-full items-center">
+    <div id="gallery" className="flex flex-col gap-5 w-full items-center">
       {/* Banner Section */}
       <div className="relative w-full min-h-[50vh] overflow-hidden">
         {/* Background Image */}

@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <div className="relative w-full">
       {/* Consultation Section */}
-      <section className=" relative bg-gradient-to-b from-blue-500 to-blue-300 py-12 px-4">
+      <section id="contact" className=" relative bg-gradient-to-b from-blue-500 to-blue-300 py-12 px-4">
         <div className="max-w-5xl mx-auto flex flex-col items-center gap-6">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white text-center">
             Get A Full Consultation – Absolutely Free!

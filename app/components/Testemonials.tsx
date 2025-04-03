@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 
 const Testemonials = () => {
   return (
-    <div className="flex flex-col gap-5 items-center px-4 py-8">
+    <div id="testimonials" className="flex flex-col gap-5 items-center px-4 py-8">
       <h1 className="text-center text-2xl font-bold">
         Just a Few Words From Our Satisfied Customers
       </h1>

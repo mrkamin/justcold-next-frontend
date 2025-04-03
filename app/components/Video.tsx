@@ -18,7 +18,7 @@ const Video = () => {
   };
 
   return (
-    <div className="video-container">
+    <div id="home" className="video-container">
       {/* Video */}
       <video
         ref={videoRef}

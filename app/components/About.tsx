@@ -1,8 +1,9 @@
 import Image from "next/image";
 import { FaAngleDoubleRight } from "react-icons/fa";
+
 const About = () => {
   return (
-    <div className="about-container" data-aos="fade-up">
+    <div id="aboutus" className="about-container" data-aos="fade-up">
       <div className="about-grid">
         {/* Image and Video Section */}
         <div className="about-image-container">
@@ -68,51 +69,16 @@ const About = () => {
           </h2>
           <h3 className="about-subtitle" data-aos="fade-up">Professional expertise in Refrigeration.</h3>
           <p className="about-description" data-aos="fade-up">
-            Here at JustCold Refrigeration, we believe in professionalism and keeping 
-            standards high, explaining everything clearly to ensure confidence. 
-            We&apos;ll spend as much time as necessary to successfully complete any job, 
-            leaving clients understanding things better, feeling better, at ease, and 
-            happy with their decision to entrust JustCold Refrigeration with one of their 
-            most valuable assets. Just some of our services:
+            At JustCold Refrigeration, we prioritize professionalism and high standards, ensuring our clients feel informed and confident. We dedicate the necessary time to complete every job successfully, leaving our clients satisfied and reassured. Our services include:
           </p>
 
           <div className="about-services-grid" data-aos="fade-up">
-            <div className="about-service-item">
-              <FaAngleDoubleRight />
-              <h1>Commercial Refrigeration</h1>
-            </div>
-            <div className="about-service-item">
-              <FaAngleDoubleRight />
-              <h1>Repair and Maintenance</h1>
-            </div>
-            <div className="about-service-item">
-              <FaAngleDoubleRight />
-              <h1>Walk-in Chiller</h1>
-            </div> 
-            <div className="about-service-item">
-              <FaAngleDoubleRight />
-              <h1>Freezer (Cold Room)</h1>
-            </div> 
-            <div className="about-service-item">
-              <FaAngleDoubleRight />
-              <h1>Freezer, Upright Fridge </h1>
-            </div> 
-            <div className="about-service-item">
-              <FaAngleDoubleRight />
-              <h1>Freezer, Drink Fridge,</h1>
-            </div> 
-            <div className="about-service-item">
-              <FaAngleDoubleRight />
-              <h1>Cellar Cooler, Ice Maker</h1>
-            </div>
-            <div className="about-service-item">
-              <FaAngleDoubleRight />
-              <h1>Counter Fridge</h1>
-            </div> 
-            <div className="about-service-item">
-              <FaAngleDoubleRight />
-              <h1>Blast Chiller,</h1>
-            </div>  
+            {["Commercial Refrigeration", "Repair and Maintenance", "Walk-in Chiller", "Freezer (Cold Room)", "Upright Fridge", "Drink Fridge", "Cellar Cooler", "Ice Maker", "Counter Fridge", "Blast Chiller"].map((service, index) => (
+              <div className="about-service-item" key={index}>
+                <FaAngleDoubleRight />
+                <h1>{service}</h1>
+              </div>
+            ))}
           </div>
         </div>
       </div>

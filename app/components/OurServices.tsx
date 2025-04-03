@@ -16,7 +16,8 @@ const OurServices = () => {
   }, []);
   
   return (
-    <div className="place-items-center 
+    <div id='services' 
+        className="place-items-center 
                     bg-blue-100 py-10
                     px-2 relative 
                     ourservices-container" data-aos="fade-up">
