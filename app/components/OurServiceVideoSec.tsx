@@ -29,7 +29,7 @@ const OurServiceVideoSec = () => {
   }, [isPlaying]);
 
   return (
-    <div className="relative w-full h-[50vh] border-4 border-[#24b8eb] rounded-lg overflow-hidden">
+    <div className="relative w-full h-[50vh] border-4 border-[#24b8eb] rounded-lg overflow-hidden" data-aos="fade-up">
       {/* Video */}
       <video
         ref={videoRef}

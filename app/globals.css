@@ -250,9 +250,9 @@ body {
 /*Hero-title*/
 
 .hero-title-container {
-  @apply absolute top-30  
+  @apply absolute top-30
   md:left-5 lg:left-15 
-  sm:w-[100%] md:w-[80%] lg:w-[60%] 
+  sm:w-[100%] md:w-[80%] lg:w-[43%] 
   flex flex-col gap-4 z-30 p-2 
   rounded-[0.2rem];
 }
@@ -267,7 +267,7 @@ body {
 .hero-title-heading {
   @apply text-white text-3xl w-fit 
   sm:text-4xl md:text-5xl 
-  lg:text-6xl rounded-lg p-1
+  xl:text-6xl rounded-lg p-1
   font-semibold bg-[#1f1f38];
 }
 
@@ -387,11 +387,11 @@ body {
 }
 
 .ourservices-wrapper {
-  @apply flex flex-col gap-5 w-full md:w-[90%] lg:w-[80%] items-center;
+  @apply flex flex-col gap-20 w-full md:w-[90%] lg:w-[80%] items-center;
 }
 
 .section-title {
-  @apply text-3xl w-fit font-bold relative inline-block h-12;
+  @apply text-3xl w-fit font-bold relative inline-block ;
 }
 
 .section-description {
@@ -399,7 +399,11 @@ body {
 }
 
 .service-card {
-  @apply flex flex-col text-[#1f1f38] gap-1 bg-white shadow-lg rounded-lg overflow-hidden;
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5;
+}
+
+.service-image-cont {
+  @apply flex flex-col text-[#1f1f38] gap-1 bg-white
 }
 
 .service-image {

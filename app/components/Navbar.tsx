@@ -12,7 +12,7 @@ const Navbar = () => {
       setIsScrolled(window.scrollY > 50);
 
       // Automatically update active section based on scroll position
-      const sections = ["home", "services", "aboutus", "gallery", "testimonials", "contact"];
+      const sections = ["home", "aboutus", "services", "gallery", "testimonials", "contact"];
       sections.forEach((section) => {
         const element = document.getElementById(section);
         if (element) {
@@ -61,7 +61,7 @@ const Navbar = () => {
         {/* Navigation Links */}
         <div className={`nav-links ${isOpen ? "nav-links-open" : "nav-links-closed"}`}>
           <ul className="menu-list">
-            {["Home", "Services", "About Us", "Gallery", "Testimonials", "Contact"].map(
+            {["Home", "About Us", "Services", "Gallery", "Testimonials", "Contact"].map(
               (item) => {
                 const sectionId = item.toLowerCase().replace(/\s+/g, "");
                 return (
