@@ -13,10 +13,12 @@ const ComponentsTwo = () => {
         <Video />
         <About />
         <OurServices />
-        <GetReady />
-        <Testemonials />
-        <PricingPremiumSection />
-        <Footer />
+        <div className='relative top-60'>
+          <GetReady />
+          <Testemonials />
+          <PricingPremiumSection />
+          <Footer />
+        </div>
     </div>
   )
 }

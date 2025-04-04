@@ -383,11 +383,11 @@ body {
 
 /* General Styling */
 .ourservices-container {
-  @apply place-items-center bg-blue-100 py-10 px-2 relative;
+  @apply place-items-center py-10 relative;
 }
 
 .ourservices-wrapper {
-  @apply flex flex-col gap-20 w-full md:w-[90%] lg:w-[80%] items-center;
+  @apply flex flex-col gap-20 items-center;
 }
 
 .section-title {
