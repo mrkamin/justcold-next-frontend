@@ -96,7 +96,7 @@ const OurServices = () => {
               {Data.map((item) => <ServiceCard key={item.id} item={item} />)}
             </div>
           </div>
-          <div className="flex h-[50vh] p-2 md:p-0  md:h-[45vh] flex-col w-full md:w-[90%] lg:w-[80%] items-center gap-5 w-full">
+          <div className="flex h-[400px] sm:h-[350px] md:h-[330px] p-2 md:p-0 flex-col w-full md:w-[90%] lg:w-[80%] items-center gap-5 w-full">
             <div className="flex flex-col gap-5 md:flex-row place-items-center" data-aos="fade-up">
               <div className="flex flex-col gap-2 place-items-center text-[#1f1f38]">
                 <div className="place-items-center">
