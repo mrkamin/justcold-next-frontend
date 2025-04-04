@@ -1,11 +1,12 @@
 import Image from "next/image";
 import { FaAngleDoubleRight } from "react-icons/fa";
+import { GiBubbles } from "react-icons/gi";
 
 const GetReady = () => {
   return (
     <div id="gallery" className="flex flex-col gap-5 w-full items-center">
       {/* Banner Section */}
-      <div className="relative w-full min-h-[50vh] overflow-hidden">
+      <div className="relative w-full min-h-[70vh] overflow-hidden">
         {/* Background Image */}
         <Image
           src="https://res.cloudinary.com/dagjuuf4v/image/upload/v1742742831/banner_nfbosv.jpg"
@@ -15,10 +16,10 @@ const GetReady = () => {
         />
 
         {/* Blue Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900 via-blue-600 to-transparent opacity-90" />
+        <div className="absolute w-[90%] md:w-[70%] lg:w-[60%] h-full bg-[linear-gradient(to_right,_#1f1f38,_#4db5ff_90%,_transparent_100%)]" />
 
         {/* Content */}
-        <div className="absolute top-0 left-0 w-full md:w-1/2 h-full flex flex-col justify-center text-white p-6 gap-3">
+        <div className="absolute top-0 left-0 md:left-40 w-full md:w-1/2 h-full flex flex-col justify-center text-white p-6 gap-3">
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold">
             Get Your Cold Room Ready Now!
           </h1>
@@ -59,6 +60,7 @@ const GetReady = () => {
             BOOK NOW
           </button>
         </div>
+        <GiBubbles  className="absolute text-xl text-white z-11 bottom-20 left-50 md:left-20"/>
       </div>
 
       {/* Images Grid */}
