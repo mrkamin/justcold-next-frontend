@@ -3,19 +3,52 @@ import { FaAngleDoubleRight } from "react-icons/fa";
 import { GiBubbles } from "react-icons/gi";
 
 const GetReady = () => {
+  const specials = [
+    {
+      title: "Build New Cold Room",
+      description: "Save 10% on any new cold room building",
+    },
+    {
+      title: "Fridge Services",
+      description: "5% off all refrigeration services",
+    },
+    {
+      title: "New Customer Bonus",
+      description: "£25 off your first service with us!",
+    },
+  ];
+
+  const galleryImages = [
+    [
+      "https://res.cloudinary.com/dagjuuf4v/image/upload/v1742726726/1.jpg",
+      "https://res.cloudinary.com/dagjuuf4v/image/upload/v1742726725/2.jpg",
+    ],
+    [
+      "https://res.cloudinary.com/dagjuuf4v/image/upload/v1742726724/3.jpg",
+      "https://res.cloudinary.com/dagjuuf4v/image/upload/v1742726725/4.jpg",
+    ],
+    [
+      "https://res.cloudinary.com/dagjuuf4v/image/upload/v1742726724/5.jpg",
+      "https://res.cloudinary.com/dagjuuf4v/image/upload/v1742726723/6.jpg",
+    ],
+    [
+      "https://res.cloudinary.com/dagjuuf4v/image/upload/v1742726724/7.jpg",
+      "https://res.cloudinary.com/dagjuuf4v/image/upload/v1742726620/8.jpg",
+    ],
+  ];
+
   return (
     <div id="gallery" className="flex flex-col gap-5 w-full items-center">
       {/* Banner Section */}
       <div className="relative w-full min-h-[70vh] overflow-hidden">
-        {/* Background Image */}
         <Image
           src="https://res.cloudinary.com/dagjuuf4v/image/upload/v1742742831/banner_nfbosv.jpg"
-          alt="GetReadyPhoto"
+          alt="Get Ready Photo"
           fill
           className="object-cover"
         />
 
-        {/* Blue Overlay */}
+        {/* Gradient Overlay */}
         <div className="absolute w-[90%] md:w-[70%] lg:w-[60%] h-full bg-[linear-gradient(to_right,_#1f1f38,_#4db5ff_90%,_transparent_100%)]" />
 
         {/* Content */}
@@ -24,123 +57,46 @@ const GetReady = () => {
             Get Your Cold Room Ready Now!
           </h1>
           <p className="text-sm md:text-lg">
-            Save $$$ if you choose to bundle services!
+            Save £££ if you choose to bundle services!
           </p>
-          <h3 className="text-md md:text-xl font-semibold">
-            Current Specials:
-          </h3>
+          <h3 className="text-md md:text-xl font-semibold">Current Specials:</h3>
 
-          {/* Specials List */}
           <div className="flex flex-col gap-2">
-            <div className="flex gap-2 items-center">
-              <FaAngleDoubleRight />
-              <span className="text-sm md:text-md">
-                <span className="font-bold">Build New Cold Room</span> – Save 10%
-                on any new cold room building
-              </span>
-            </div>
-            <div className="flex gap-2 items-center">
-              <FaAngleDoubleRight />
-              <span className="text-sm md:text-md">
-                <span className="font-bold">Frege Services</span> – 5% off all
-                refrigeration services
-              </span>
-            </div>
-            <div className="flex gap-2 items-center">
-              <FaAngleDoubleRight />
-              <span className="text-sm md:text-md">
-                <span className="font-bold">New Customer Bonus</span> – $25 off
-                your first service with us!
-              </span>
-            </div>
+            {specials.map((item, index) => (
+              <div key={index} className="flex gap-2 items-center">
+                <FaAngleDoubleRight />
+                <span className="text-sm md:text-base">
+                  <span className="font-bold">{item.title}</span> – {item.description}
+                </span>
+              </div>
+            ))}
           </div>
 
-          {/* Book Now Button */}
           <button className="mt-4 px-5 py-2 bg-[#24b8eb] text-white font-semibold rounded-lg shadow-lg hover:bg-blue-500 transition w-fit">
             BOOK NOW
           </button>
         </div>
-        <GiBubbles  className="absolute text-xl text-white z-11 bottom-20 left-50 md:left-20"/>
+
+        <GiBubbles className="absolute text-xl text-white z-10 bottom-15 left-60 md:left-30 transform -translate-x-1/2 md:translate-x-0" />
       </div>
 
       {/* Images Grid */}
       <div className="w-full max-w-[1200px] px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {/* Row 1 */}
-          <div className="flex gap-2 p-2 shadow-md bg-white">
-            <div className="relative w-full h-40">
-              <Image
-                src="https://res.cloudinary.com/dagjuuf4v/image/upload/v1742726726/5_zwlia7.png"
-                alt="ourserviceimg"
-                fill
-                className="object-cover rounded"
-              />
+          {galleryImages.map((pair, idx) => (
+            <div key={idx} className="flex gap-2 p-2 shadow-md bg-white">
+              {pair.map((imgSrc, i) => (
+                <div key={i} className="relative w-full h-40">
+                  <Image
+                    src={imgSrc}
+                    alt={`ourserviceimg-${idx}-${i}`}
+                    fill
+                    className="object-cover rounded"
+                  />
+                </div>
+              ))}
             </div>
-            <div className="relative w-full h-40">
-              <Image
-                src="https://res.cloudinary.com/dagjuuf4v/image/upload/v1742726725/6_pwaz1q.jpg"
-                alt="ourserviceimg"
-                fill
-                className="object-cover rounded"
-              />
-            </div>
-          </div>
-          <div className="flex gap-2 p-2 shadow-md bg-white">
-            <div className="relative w-full h-40">
-              <Image
-                src="https://res.cloudinary.com/dagjuuf4v/image/upload/v1742726724/7_zbtimi.jpg"
-                alt="ourserviceimg"
-                fill
-                className="object-cover rounded"
-              />
-            </div>
-            <div className="relative w-full h-40">
-              <Image
-                src="https://res.cloudinary.com/dagjuuf4v/image/upload/v1742726725/8_tkgo9t.jpg"
-                alt="ourserviceimg"
-                fill
-                className="object-cover rounded"
-              />
-            </div>
-          </div>
-
-          {/* Row 2 */}
-          <div className="flex gap-2 p-2 shadow-md bg-white">
-            <div className="relative w-full h-40">
-              <Image
-                src="https://res.cloudinary.com/dagjuuf4v/image/upload/v1742726724/2_zibvmn.jpg"
-                alt="ourserviceimg"
-                fill
-                className="object-cover rounded"
-              />
-            </div>
-            <div className="relative w-full h-40">
-              <Image
-                src="https://res.cloudinary.com/dagjuuf4v/image/upload/v1742726723/4_vbrd4v.avif"
-                alt="ourserviceimg"
-                fill
-                className="object-cover rounded"
-              />
-            </div>
-          </div>
-          <div className="flex gap-2 p-2 shadow-md bg-white">
-            <div className="relative w-full h-40">
-              <Image
-                src="https://res.cloudinary.com/dagjuuf4v/image/upload/v1742726724/3_f4o1ka.jpg"
-                alt="ourserviceimg"
-                fill
-                className="object-cover rounded"
-              />
-            </div>
-            <div className="relative w-full h-40">
-              <Image
-                src="https://res.cloudinary.com/dagjuuf4v/image/upload/v1742726620/WhatsApp_Image_2024-10-12_at_01.24.57_34f8328f_oygbpc.jpg"
-                alt="ourserviceimg"
-                fill
-                className="object-cover rounded"
-              />
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
