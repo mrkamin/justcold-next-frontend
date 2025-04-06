@@ -49,7 +49,7 @@ export const Data = [
       id: 1,
       name: "Mohammad Rafi Amin",
       discriptions:
-        "We're so happy we chose JustCold Refrigeration, they did an amazing job! Our cold room looks outstanding.",
+        "We're so happy we chose JustCold Refrigeration, they did an amazing job! Our cold room looks outstanding.We're so happy we chose JustCold Refrigeration, they did an amazing job! Our cold room looks outstanding. ",
       rating: 5,
     },
     {
