@@ -16,7 +16,7 @@ const Testemonials = () => {
   const [expanded, setExpanded] = useState<{ [key: number]: boolean }>({});
 
   return (
-    <div id="testimonials" className="flex flex-col gap-5 items-center py-20 bg-blue-200 my-20">
+    <div id="testimonials" className="flex flex-col gap-5 items-center py-10 bg-blue-200 my-20">
       <div className="place-items-center">
       <h2 className="section-title place-items-center text-[#1f1f38]">
         Just a Few Words From Our<h3>Satisfied Customers</h3>
