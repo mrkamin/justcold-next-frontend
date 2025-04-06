@@ -31,15 +31,23 @@ const Testemonials = () => {
           <path d="M0,5 Q10,0 20,5 T40,5 T60,5 T80,5 T100,5 T120,5 T140,5 T160,5 T180,5 T200,5" stroke="url(#gradient)" strokeWidth="2" fill="none" />
         </svg>
       </div>
-      <div className="flex items-center gap-2">
-        <GoogleIcon />
-        <BsStarFill className="text-yellow-500" />
-        <BsStarFill className="text-yellow-500" />
-        <BsStarFill className="text-yellow-500" />
-        <BsStarFill className="text-yellow-500" />
-        <BsStarFill className="text-yellow-500" />
-        <p className="text-gray-700">Ratings & Reviews</p>
-      </div>
+      <div className="bg-white shadow-md px-4 py-3">
+      <div className="flex flex-col items-center gap-1 text-center">
+  <div className="flex items-center gap-2">
+    <GoogleIcon />
+    <span className="text-xl font-semibold text-gray-900">5.0</span>
+    <div className="flex gap-[2px]">
+      {[...Array(5)].map((_, i) => (
+        <BsStarFill key={i} className="text-yellow-400 w-5 h-5" />
+      ))}
+    </div>
+  </div>
+  <p className="text-sm text-gray-600">Based on Google Reviews</p>
+  <p className="text-sm text-gray-500">200+ customer reviews</p>
+
+</div>
+</div>
+
       <div className="w-full flex flex-col items-center relative">
   {/* Navigation buttons */}
   <button
