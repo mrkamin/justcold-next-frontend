@@ -72,7 +72,7 @@ const GetReady = () => {
             ))}
           </div>
 
-          <button className="mt-4 px-5 py-2 bg-[#24b8eb] text-white font-semibold rounded-lg shadow-lg hover:bg-blue-500 transition w-fit">
+          <button className="estimate-btn w-fit">
             BOOK NOW
           </button>
         </div>

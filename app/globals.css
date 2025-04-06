@@ -435,3 +435,10 @@ body {
 .underline-svg {
   @apply absolute bottom-0 left-0 w-full;
 }
+
+.swiper-pagination-bullet {
+  @apply w-3 h-3 bg-gray-400 rounded-full opacity-50 transition-all;
+}
+.swiper-pagination-bullet-active {
+  @apply bg-blue-600 opacity-100 scale-110;
+}
