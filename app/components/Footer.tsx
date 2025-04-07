@@ -1,62 +1,81 @@
+import { Fuzzy_Bubbles } from "next/font/google";
 import Image from "next/image";
-import { BiLocationPlus } from "react-icons/bi";
+import { BiLocationPlus, BiUser } from "react-icons/bi";
+import { GiBoilingBubbles, GiBubbleField, GiBubbles } from "react-icons/gi";
+import { ImBubbles, ImBubbles3 } from "react-icons/im";
 import { MdEmail } from "react-icons/md";
 import { PiPhone } from "react-icons/pi";
+import { SlBubbles } from "react-icons/sl";
+import { TbBubblePlus } from "react-icons/tb";
+import { TfiEmail } from "react-icons/tfi";
 
 export default function Footer() {
   return (
-    <div className="relative w-full">
+    <div className="relative w-full flex flex-col place-items-center">
       {/* Consultation Section */}
-      <section id="contact" className=" relative bg-gradient-to-b from-blue-500 to-blue-300 py-12 px-4">
-        <div className="max-w-5xl mx-auto flex flex-col items-center gap-6">
+      <section id="contact" className=" relative z-10 bottom-[-170] w-[80%] bg-gradient-to-b rounded from-[#4db5ff] to-[#1f1f38] py-12 px-4">
+        <GiBubbles className='text-white h-10 w-16 absolute bottom-5' />
+        <GiBubbles className='text-white h-10 w-16 absolute right-5 top-5' />
+        <div className=" flex flex-col items-center gap-5">
+          <div className="w-[70%] flex flex-col items-center">
+          <p className="font-bold text-white">FREE CONSULTATION</p>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white text-center">
             Get A Full Consultation – Absolutely Free!
           </h2>
           <p className="text-center text-white max-w-xl">
             Leave your contact info and we’ll get back to you.
           </p>
+          </div>
 
           {/* Form Card */}
-          <form className="bg-white rounded-lg shadow-lg w-full max-w-3xl p-6">
+          <form className="w-[70%] flex flex-col gap-5">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
-              />
-              <input
-                type="text"
-                placeholder="Phone"
-                className="border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
-              />
-              <input
-                type="email"
-                placeholder="Email"
-                className="border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
-              />
+            <div className="flex items-center bg-white/20 border border-white rounded-3xl p-3 text-white">
+  <input
+    type="text"
+    placeholder="Name"
+    className="bg-transparent flex-1 focus:outline-none text-white placeholder-white"
+  />
+  <BiUser />
+</div>
+<div className="flex items-center bg-white/20 border border-white rounded-3xl p-3 text-white">
+  <input
+    type="text"
+    placeholder="Phone"
+    className="bg-transparent flex-1 focus:outline-none text-white placeholder-white"
+  />
+  <PiPhone />
+</div>
+              
+<div className="flex items-center bg-white/20 border border-white rounded-3xl p-3 text-white">
+  <input
+    type="email"
+    placeholder="Email"
+    className="bg-transparent flex-1 focus:outline-none text-white placeholder-white"
+  />
+  <TfiEmail />
+</div>
             </div>
             <textarea
               placeholder="Type your message..."
-              className="border border-gray-300 p-3 rounded w-full h-28 mt-4 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="border border-white p-3 rounded w-full text-white bg-white/20"
             ></textarea>
-            <div className="flex justify-end mt-4">
+            
               <button
                 type="submit"
-                className="bg-[#24b8eb] hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold transition"
+                className="estimate-btn
+                absolute w-fit bottom-[-20] left-[40%]"
               >
                 REQUEST A FREE ESTIMATE
               </button>
-            </div>
+          
           </form>
         </div>
        
       </section>
-
-     
-
       {/* Footer */}
-      <footer className="bg-[#024873] text-white pt-20 pb-8 relative">
-        <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <footer className="bg-[#024873] w-full text-white pt-70 pb-8 place-items-center">
+        <div className="w-[80%] px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo & Contact */}
           <div className="col-span-1 flex flex-col items-start gap-4">
             {/* Replace with your actual logo */}
