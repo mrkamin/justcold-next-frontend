@@ -81,7 +81,7 @@ const GetReady = () => {
       </div>
 
       {/* Images Grid */}
-      <div className="w-full max-w-[1200px] px-4">
+      <div className="w-full md:w-[90%] lg:w-[80%] px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {galleryImages.map((pair, idx) => (
             <div key={idx} className="flex gap-2 p-2 shadow-md bg-white">
