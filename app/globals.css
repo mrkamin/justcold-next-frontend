@@ -49,7 +49,7 @@ body {
 /* NavUpperHead Styles */
 .nav-upper {
   @apply bg-gradient-to-r from-[#1f1f38] 
-  to-[#4db5ff] h-18 sm:h-12 flex 
+  to-[#4db5ff] h-[12vh] sm:h-[6vh] flex 
   justify-center w-full z-2 ;
 }
 
@@ -59,7 +59,9 @@ body {
 }
 
 .bubble-icon {
-  @apply text-xl;
+  @apply text-xl
+  w-fit
+  h-[5vh];
 }
 
 .contact-wrapper {

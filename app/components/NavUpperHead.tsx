@@ -9,9 +9,9 @@ const NavUpperHead = () => {
       <div className="nav-container">
         <GiBubbles className="bubble-icon" />
         <div className="contact-wrapper">
-          <ContactItem icon={<PiPhoneCall />} text="+44 7891 673331" />
+          <ContactItem icon={<PiPhoneCall className="h-[3vh] w-fit"/>} text="+44 7891 673331" />
           <span className="divider" />
-          <ContactItem icon={<TfiEmail />} text="info@justcold.co.uk" />
+          <ContactItem icon={<TfiEmail className="h-[3vh] w-fit" />} text="info@justcold.co.uk" />
         </div>
       </div>
     </nav>
@@ -21,7 +21,7 @@ const NavUpperHead = () => {
 const ContactItem = ({ icon, text }: { icon: JSX.Element; text: string }) => (
   <div className="contact-item">
     <div className="contact-icon">{icon}</div>
-    <p>{text}</p>
+    <p className="text-[1rem]">{text}</p>
   </div>
 );
 
