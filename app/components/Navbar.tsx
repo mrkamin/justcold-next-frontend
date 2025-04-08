@@ -45,7 +45,7 @@ const Navbar = () => {
       <div className="nav-content justify-between">
         {/* Logo */}
         <div className="flex justify-between w-full md:w-fit items-center">
-          <div className="logo-container">
+          <div className="logo-container" onClick={() => handleNavClick("home")}>
             <SvgLogo />
           </div>
           {/* Menu Button */}

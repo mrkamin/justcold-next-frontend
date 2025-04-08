@@ -187,8 +187,7 @@ body {
 .menu-item {
   @apply hover:text-gray-300 
   cursor-pointer rounded-md 
-  md:text-center w-fit text-lg 
-  md:text-sm lg:text-xl;
+  md:text-center w-fit md:text-[1.5vw];
 }
 
 .estimate-btn {

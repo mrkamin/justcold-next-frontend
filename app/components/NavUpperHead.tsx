@@ -21,7 +21,7 @@ const NavUpperHead = () => {
 const ContactItem = ({ icon, text }: { icon: JSX.Element; text: string }) => (
   <div className="contact-item">
     <div className="contact-icon">{icon}</div>
-    <p className="text-[1rem]">{text}</p>
+    <p className="md:text-[1.2vw]">{text}</p>
   </div>
 );
 
