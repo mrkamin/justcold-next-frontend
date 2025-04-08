@@ -1,19 +1,15 @@
-import { Fuzzy_Bubbles } from "next/font/google";
 import Image from "next/image";
 import { BiLocationPlus, BiUser } from "react-icons/bi";
-import { GiBoilingBubbles, GiBubbleField, GiBubbles } from "react-icons/gi";
-import { ImBubbles, ImBubbles3 } from "react-icons/im";
+import { GiBubbles } from "react-icons/gi";
 import { MdEmail } from "react-icons/md";
 import { PiPhone } from "react-icons/pi";
-import { SlBubbles } from "react-icons/sl";
-import { TbBubblePlus } from "react-icons/tb";
 import { TfiEmail } from "react-icons/tfi";
 
 export default function Footer() {
   return (
     <div className="relative w-full flex flex-col place-items-center">
       {/* Consultation Section */}
-      <section id="contact" className=" relative z-10 bottom-[-170] w-[80%] bg-gradient-to-b rounded from-[#4db5ff] to-[#1f1f38] py-12 px-4">
+      <section id="contact" className="relative z-10 bottom-[-170] w-[80%] bg-gradient-to-b rounded from-[#4db5ff] to-[#1f1f38] py-12 px-4">
         <GiBubbles className='text-white h-10 w-16 absolute bottom-5' />
         <GiBubbles className='text-white h-10 w-16 absolute right-5 top-5' />
         <div className=" flex flex-col items-center gap-5">
@@ -63,8 +59,8 @@ export default function Footer() {
             
               <button
                 type="submit"
-                className="estimate-btn
-                absolute w-fit bottom-[-20] left-[40%]"
+                className="estimate-btn left-0 
+                absolute w-full md:w-fit bottom-[-20] md:left-[40%]"
               >
                 REQUEST A FREE ESTIMATE
               </button>

@@ -17,7 +17,9 @@ const ComponentsTwo = () => {
           <GetReady />
           <Testemonials />
           <PricingPremiumSection />
-          <Footer />
+        </div>
+        <div className='relative top-30'>
+        <Footer />
         </div>
     </div>
   )
