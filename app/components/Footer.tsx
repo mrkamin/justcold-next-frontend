@@ -1,15 +1,20 @@
 import Image from "next/image";
+import Link from "next/link";
 import { BiLocationPlus, BiUser } from "react-icons/bi";
+import { BsYoutube } from "react-icons/bs";
+import { FaFacebook } from "react-icons/fa";
 import { GiBubbles } from "react-icons/gi";
+import { LiaLinkedin } from "react-icons/lia";
 import { MdEmail } from "react-icons/md";
 import { PiPhone } from "react-icons/pi";
 import { TfiEmail } from "react-icons/tfi";
 
 export default function Footer() {
   return (
-    <div className="relative w-full flex flex-col place-items-center">
+    <div id="contact">
+    <div id="getanestimate" className="relative w-full flex flex-col place-items-center">
       {/* Consultation Section */}
-      <section id="contact" className="relative z-10 bottom-[-170] w-[80%] bg-gradient-to-b rounded from-[#4db5ff] to-[#1f1f38] py-12 px-4">
+      <section className="relative z-10 bottom-[-170] w-[80%] bg-gradient-to-b rounded from-[#4db5ff] to-[#1f1f38] py-12 px-4">
         <GiBubbles className='text-white h-10 w-16 absolute bottom-5' />
         <GiBubbles className='text-white h-10 w-16 absolute right-5 top-5' />
         <div className=" flex flex-col items-center gap-5">
@@ -70,17 +75,17 @@ export default function Footer() {
        
       </section>
       {/* Footer */}
-      <footer className="bg-[#024873] w-full text-white pt-70 pb-8 place-items-center">
+      <footer className="bg-gradient-to-b from-[#4db5ff] to-[#1f1f38] w-full text-white pt-70 pb-8 place-items-center">
         <div className="w-[80%] px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo & Contact */}
           <div className="col-span-1 flex flex-col items-start gap-4">
             {/* Replace with your actual logo */}
             <Image
-              src="https://res.cloudinary.com/dagjuuf4v/image/upload/v1742710425/justcold-high-resolution-logo_w8hh6u.png"
+              src="https://res.cloudinary.com/dagjuuf4v/image/upload/v1744122755/logo-white-transparent.png"
               alt="Logo"
               width={150}
               height={80}
-              className="object-contain"
+              className="object-contain rounded-lg"
             />
             <div className="flex gap-2 items-center text-white mt-2">
               <PiPhone />
@@ -98,13 +103,30 @@ export default function Footer() {
           {/* Quick Links */}
           <div className="col-span-1 flex flex-col gap-2">
             <h3 className="text-lg font-semibold mb-2">Quick Links</h3>
-            <ul className="space-y-1">
-              <li>Home</li>
-              <li>Services</li>
-              <li>Gallery</li>
-              <li>Testimonials</li>
-              <li>Contact</li>
-            </ul>
+            
+            <ul className="space-y-2">
+            {["Home", "About Us", "Services", "Gallery", "Testimonials", "Contact", "Get An Estimate"].map(
+ (item) => {
+  const sectionId = item.toLowerCase().replace(/\s+/g, "")
+                return (
+                  <li
+                    key={item}
+                    className="cursor-pointer"
+                    onClick={() => {
+                      const section = document.getElementById(sectionId);
+                      if (section) {
+                        section.scrollIntoView({behavior: "smooth", block: "start"});
+
+                      }
+                    }}
+                  >
+                    {item}
+                  </li>
+                );
+              }
+            )}
+          </ul>
+          
           </div>
 
           {/* Services */}
@@ -120,12 +142,39 @@ export default function Footer() {
           </div>
 
           {/* Hours of Operation */}
-          <div className="col-span-1 flex flex-col gap-2">
-            <h3 className="text-lg font-semibold mb-2">Hours of Operation</h3>
-            <p>Monday - Friday: 8AM - 5PM</p>
-            <p>Saturday: By Appointment</p>
-            <p>Sunday: By Appointment</p>
-          </div>
+          <div className="flex flex-col gap-10">
+            <div>
+              <h3 className="text-lg font-semibold mb-2">Hours of Operation</h3>
+              <p>Monday - Friday: 8AM - 5PM</p>
+              <p>Saturday: By Appointment</p>
+              <p>Sunday: By Appointment</p>
+            </div>
+            <div className="flex flex-col gap-3">
+              <h1 className="text-lg font-semibold mb-2">FOLLOW US</h1>
+              <div className="flex gap-10">
+                  <Link
+                    href="https://www.facebook.com/profile.php?id=61567157396020"
+                    target="_blank"
+                    className="hover:border-[#4db5ff] p-5 border rounded-full cursor-pointer hover:bg-white/10 transition-all duration-500 ease-in-out"
+                  >
+                      <FaFacebook className="h-[3vh] w-fit" />
+                  </Link>
+                  <Link
+                    href="https://www.youtube.com/@gxtv9305"
+                    target="_blank"
+                    className="hover:border-[#4db5ff] p-5 border rounded-full cursor-pointer hover:bg-white/10 transition-all duration-500 ease-in-out"
+                  >
+                    <BsYoutube className="h-[3vh] w-fit" />
+                  </Link>
+                  <Link
+                    href="https://www.linkedin.com/in/mohammad-rafi-amin/"
+                    target="_blank"
+                    className="hover:border-[#4db5ff] p-5 border rounded-full cursor-pointer hover:bg-white/10 transition-all duration-500 ease-in-out"
+                  ><LiaLinkedin className="h-[3vh] w-fit" />
+                </Link>
+              </div>
+             </div>
+            </div>
         </div>
 
         {/* Footer Bottom */}
@@ -133,6 +182,7 @@ export default function Footer() {
           © 2025 JustCold Referegeration LTD. All Rights Reserved.
         </div>
       </footer>
+    </div>
     </div>
   );
 }

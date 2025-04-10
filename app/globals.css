@@ -443,3 +443,5 @@ body {
 .swiper-pagination-bullet-active {
   @apply bg-blue-600 opacity-100 scale-110;
 }
+
+
