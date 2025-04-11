@@ -1,5 +1,4 @@
 import { useState, useEffect, useCallback } from "react";
-import { SvgLogo } from "../svg";
 import { FiMenu, FiX } from "react-icons/fi";
 import Image from "next/image";
 
