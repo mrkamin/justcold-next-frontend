@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { SvgLogo } from "../svg";
 import { FiMenu, FiX } from "react-icons/fi";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,11 +43,16 @@ const Navbar = () => {
 
   return (
     <nav id="navbar" className={`navbar ${isScrolled ? "scrolled" : ""}`}>
-      <div className="nav-content justify-between">
+      <div className="nav-content">
         {/* Logo */}
         <div className="flex justify-between w-full md:w-fit items-center">
           <div className="logo-container" onClick={() => handleNavClick("home")}>
-            <SvgLogo />
+            <Image 
+                src="https://res.cloudinary.com/dagjuuf4v/image/upload/v1744308505/justcoldlogo.png"
+                width={40000}
+                height={40000}
+                alt="logo"
+                className="h-[2vw] w-fit" />
           </div>
           {/* Menu Button */}
           <button

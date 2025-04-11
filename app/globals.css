@@ -49,7 +49,7 @@ body {
 /* NavUpperHead Styles */
 .nav-upper {
   @apply bg-gradient-to-r from-[#1f1f38] 
-  to-[#4db5ff] h-[12vh] sm:h-[6vh] flex 
+  to-[#4db5ff] p-1 flex 
   justify-center w-full z-2 ;
 }
 
@@ -86,43 +86,46 @@ body {
 
 /* Navbar Styles */
 #navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 900;
-  padding-top: 20px;
   padding-bottom: 20px;
   transition: var(--transition);
-  
 }
 
 .navbar {
   @apply flex flex-col items-center
-  w-full top-18 md:top-12 p-1
+  w-full p-1 pt-[14vh] sm:pt-[8vh]
   
 }
 
 .navbar.scrolled {
   @apply bg-gradient-to-r from-[#1f1f38] 
   to-[#4db5ff] shadow-lg;
-  
 }
 
 .navbar.scrolled {
-  padding-top: 0px !important;
-  padding-bottom: 0px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+@media (min-width: 768px) {
+  .navbar.scrolled {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+  }
 }
 
 .nav-content {
   @apply w-full lg:w-[90%] gap-2 
   flex flex-col md:flex-row 
-  justify-between  
-  px-5 md:px-0 
+  px-5 md:px-0 justify-between
   text-white items-center;
 }
 
 .logo-container {
   @apply z-2 bg-[#1f1f38] 
-  rounded-full p-1 
+  rounded-full p-2  
   hover:bg-[#1f1f3890]
   cursor-pointer
   transition-all
@@ -141,7 +144,7 @@ body {
 
 .nav-links {
   @apply absolute md:static
-  pt-25 pb-2 px-2 md:p-2  
+  pt-30 pb-2 px-5 md:p-2  
   top-0 left-0 w-full md:w-fit
   bg-gradient-to-r from-[#1f1f38] 
   to-[#4db5ff] transition-transform 
@@ -192,12 +195,13 @@ body {
 
 .estimate-btn {
   @apply bg-[#4db5ff] text-white 
-  px-4 py-2 rounded-4xl text-lg
+  px-4 py-1 rounded-4xl
   hover:bg-[#1f1f3890] 
   hover:text-[#ffffff90] 
   transition-all duration-900
   ease-in-out cursor-pointer
   border border-[#4db5ff]
+  md:text-[1.5vw]
 }
 
 /* Video */
