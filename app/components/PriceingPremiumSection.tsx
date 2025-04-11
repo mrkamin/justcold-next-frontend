@@ -1,17 +1,35 @@
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import {BiLike } from "react-icons/bi";
 import { FaMedal } from "react-icons/fa6";
 import { IoLeafOutline } from "react-icons/io5";
 import { LuRefrigerator } from "react-icons/lu";
 import { TbLicense } from "react-icons/tb";
 
-const positions = [
+const smPositions = [
+  { top: 270, left: 25 },
+  { top: 160, left: 35 },
+  { top: 50, left: 50 },
+  { top: 160, left: 65 },
+  { top: 270, left: 75 },
+];
+
+const mdPositions = [
+  { top: 220, left: 15 },
+  { top: 50, left: 30 },
+  { top: 240, left: 50 },
+  { top: 50, left: 70 },
+  { top: 220, left: 85 },
+];
+
+const lgPositions = [
   { top: 45, left: 10 },
   { top: 80, left: 30 },
   { top: 90, left: 50 },
   { top: 80, left: 70 },
   { top: 45, left: 90 },
 ];
+
 
 
 const items = [
@@ -49,6 +67,26 @@ const items = [
 
 
 const PricingPremiumSection = () => {
+  const [positions, setPositions] = useState(lgPositions);
+
+  useEffect(() => {
+    const updatPositions = () => {
+      const width = window.innerWidth;
+      if (width <768) {
+        setPositions(smPositions);
+      }else if (width < 992) {
+        setPositions(mdPositions)
+      }else{
+        setPositions(lgPositions)
+      }
+    };
+    if (typeof window !== "undefined") {
+      updatPositions();
+      window.addEventListener("resize", updatPositions);
+    }
+    return () => window.removeEventListener("resize", updatPositions);
+    
+  }, [])
     return (
       <div className="w-full flex flex-col gap-5 items-center pb-10 mb-20">
         {/* Heading */}
@@ -73,13 +111,25 @@ const PricingPremiumSection = () => {
         </p>
   
         {/* Container for the line and items */}
-        <div className="items-container relative w-[80%] h-[100px] flex flex-col items-center">
+        <div className="items-container relative w-[100%] md:w-[80%] h-[350px] lg:h-[100px] flex flex-col items-center">
   {/* SVG Line */}
-          <div className="w-full h-[100px]">
+  <div className="md:hidden w-[40%] h-[350px] ">
             <Image src="https://res.cloudinary.com/dagjuuf4v/image/upload/v1744285656/curve.png" 
               alt="curve line" 
               width={4000} height={20}
-              className="h-[100px]"/>
+              className="h-[30px]"/>
+          </div>
+  <div className="lg:hidden w-[80%] h-[350px] md:h-[200px]">
+            <Image src="https://res.cloudinary.com/dagjuuf4v/image/upload/v1744285656/curve.png" 
+              alt="curve line" 
+              width={4000} height={20}
+              className="h-[30px] md:h-[50px]"/>
+          </div>
+          <div className="w-full h-[350px] md:h-[200px] lg:h-[100px]">
+            <Image src="https://res.cloudinary.com/dagjuuf4v/image/upload/v1744285656/curve.png" 
+              alt="curve line" 
+              width={4000} height={20}
+              className="h-[30px] md:h-[50px] lg:h-[80px]"/>
           </div>
           {/* Icons Over Line - using grid or flex with justify-around */}
           
@@ -90,7 +140,7 @@ const PricingPremiumSection = () => {
   return (
     <div
       key={idx}
-      className="flex flex-col items-center text-center pointer-events-auto absolute w-[200px] h-[100px]"
+      className="flex flex-col items-center text-center pointer-events-auto absolute w-[160px] h-[120px]"
       style={{
         top: `${top}px`,
         left: `${left}%`,
