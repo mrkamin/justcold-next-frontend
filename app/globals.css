@@ -241,22 +241,21 @@ body {
 .hero-title-container {
   @apply absolute top-30
   md:left-5 lg:left-15 
-  sm:w-[100%] md:w-[80%] lg:w-[43%] 
-  flex flex-col gap-4 z-30 p-2 
-  rounded-[0.2rem];
+  sm:w-[100%] md:w-[80%] lg:w-[40%] 
+  flex flex-col gap-4 z-30 ;
 }
 
 .hero-title-tag {
   @apply bg-gradient-to-r 
   from-[#1f1f38] to-[#4db5ff] 
   text-white p-1 rounded-[0.5rem] 
-  w-fit text-sm;
+  w-fit text-[3vw] md:text-[2vw] lg:text-[1vw];
 }
 
 .hero-title-heading {
-  @apply text-white text-3xl w-fit 
-  sm:text-4xl md:text-5xl 
-  xl:text-6xl rounded-lg p-1
+  @apply text-white 
+  text-[10vw] md:text-[4vw] 
+  w-fit px-2 rounded-lg
   font-semibold bg-[#1f1f38];
 }
 
@@ -266,7 +265,8 @@ body {
 
 .hero-title-description {
   @apply text-white/80 bg-[#1f1f38] 
-  rounded-lg p-2 lg:w-[50%];
+  rounded-lg p-2 lg:w-[50%]
+  text-[3vw] md:text-[2vw] lg:text-[1vw];
 }
 
 /* about */

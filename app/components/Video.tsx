@@ -1,6 +1,5 @@
 import { useRef, useState } from "react";
 import HeroTitle from "./HeroTitle";
-import { PiLayoutLight } from "react-icons/pi";
 import { BiPause, BiPlay } from "react-icons/bi";
 
 const Video = () => {
