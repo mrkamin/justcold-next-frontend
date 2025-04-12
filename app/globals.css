@@ -333,28 +333,33 @@ body {
 }
 
 .about-text-container {
-  @apply flex flex-col 
-  gap-5 p-2 md:p-15 md:pr-0;
+  @apply flex flex-col 2xl:w-[80%]
+  lg:w-[90%] 
+  gap-10 p-2 md:p-15 md:pr-0;
 }
 
 .about-title {
-  @apply text-3xl font-bold 
-  relative inline-block 
-  h-12 text-[#1f1f38] w-fit;
+  @apply font-bold
+  relative inline-block text-[8vw]
+  md:text-[4vw] lg:text-[2vw]
+  text-[#1f1f38] w-fit;
 }
 
 .about-subtitle {
   @apply text-xl font-bold
-  text-[#1f1f38];
+  text-[#1f1f38] text-[6vw]
+  md:text-[3vw] lg:text-[1vw];
 }
 
 .about-description {
-  @apply text-gray-900;
+  @apply text-gray-900
+  text-[6vw]
+  md:text-[3vw] lg:text-[1vw];
 }
 
 .about-services-grid {
   @apply grid grid-cols-2 
-  md:grid-cols-3 gap-2;
+  md:grid-cols-3 gap-6;
 }
 
 .about-service-item {
@@ -367,7 +372,8 @@ body {
 
 .about-service-item {
   @apply text-[#1f1f38]
-  font-bold;
+  font-bold text-[6vw]
+  md:text-[3vw] lg:text-[1vw];
 }
 
 /* General Styling */
