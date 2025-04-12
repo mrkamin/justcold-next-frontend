@@ -6,12 +6,11 @@ import GetReady from './GetReady'
 import Testemonials from './Testemonials'
 import PricingPremiumSection from './PriceingPremiumSection'
 import Footer from './Footer'
-import Navbar from './Navbar'
+
 
 const ComponentsTwo = () => {
   return (
-    <div className='relative top-[0]'>
-        <Navbar />
+    <div className='relative'>
         <Video />
         <About />
         <OurServices />

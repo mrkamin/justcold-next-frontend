@@ -2,7 +2,6 @@
 import { useEffect } from "react";
 import AOS from 'aos'
 import ComponentOne from "./components/ComponentsOne";
-import ComponentTwo from "./components/ComponentsTwo";
 
 import "aos/dist/aos.css";
 
@@ -17,7 +16,7 @@ export default function Home() {
   return (
     <div className="">
       <ComponentOne />
-      <ComponentTwo />
+      
     </div>
   );
 }
