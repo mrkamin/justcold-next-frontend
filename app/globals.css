@@ -215,27 +215,25 @@ body {
   @apply w-full h-full object-cover;
 }
 
-.video-svg {
-  @apply absolute
-  md:w-[100px] md:h-[100px]
-  lg:w-[200px] lg:h-[200px]
-  xl:w-[400px] xl:h-[400px]
-  2xl:w-[600px] 2xl:h-[600px];
+.video-overlay {
+  @apply hidden md:block absolute pointer-events-none 
+  left-[60%] top-[15vh]
+  w-[30%] h-[60vh] 
+  ;
 }
 
+
+
 .video-button {
-  @apply pointer-events-auto 
-  rounded-full w-50 h-50 flex 
+  @apply z-990 pointer-events-auto 
+  rounded-full flex 
   items-center justify-center 
   cursor-pointer
-  md:w-[100px] md:h-[100px] 
-  lg:w-[200px] lg:h-[200px] 
-  xl:w-[400px] xl:h-[400px]
-  2xl:w-[600px] 2xl:h-[600px];
+ 
 }
 
 .video-icon {
-  @apply md:w-10 lg:w-20 md:h-10 lg:h-20 text-white;
+  @apply text-white;
 }
 
 /*Hero-title*/
