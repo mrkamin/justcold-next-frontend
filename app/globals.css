@@ -48,39 +48,50 @@ body {
 
 /* NavUpperHead Styles */
 .nav-upper {
-  @apply bg-gradient-to-r from-[#1f1f38] 
+  @apply 
+  bg-gradient-to-r 
+  from-[#1f1f38] 
   to-[#4db5ff] p-1 flex 
-  justify-center w-full z-2 h-[11vh] sm:h-[6.5vh] ;
+  justify-center 
+  w-full z-2 h-[11vh] 
+  sm:h-[6.5vh] ;
 }
 
 .nav-container {
-  @apply flex justify-between
-  items-center w-[90%] text-white;
+  @apply 
+  flex justify-between
+  items-center w-[90%] 
+  text-white;
 }
 
 .bubble-icon {
-  @apply text-xl
-  w-fit
-  h-[5vh];
+  @apply 
+  text-xl w-fit h-[5vh];
 }
 
 .contact-wrapper {
-  @apply flex flex-col sm:flex-row 
-  gap-3 sm:gap-5 items-center;
+  @apply 
+  flex flex-col 
+  sm:flex-row 
+  gap-3 sm:gap-5 
+  items-center;
 }
 
 .contact-item {
-  @apply flex items-center gap-2;
+  @apply 
+  flex items-center gap-2;
 }
 
 .contact-icon {
-  @apply border border-white 
+  @apply 
+  border border-white 
   rounded-full p-1;
 }
 
 .divider {
-  @apply hidden sm:block 
-  w-6 h-px bg-white 
+  @apply 
+  hidden sm:block 
+  w-6 bg-white 
   rotate-90;
 }
 

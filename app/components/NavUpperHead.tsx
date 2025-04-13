@@ -1,7 +1,18 @@
-import { JSX } from "react";
 import { GiBubbles } from "react-icons/gi";
 import { PiPhoneCall } from "react-icons/pi";
 import { TfiEmail } from "react-icons/tfi";
+
+interface ContactItemProps {
+  icon: React.ReactNode;
+  text: string;
+}
+
+const ContactItem = ({icon, text}: ContactItemProps) => (
+  <div className="contact-item">
+    <div className="contact-icon">{icon}</div>
+    <p className="md:text-[1.2vw]">{text}</p>
+  </div>
+);
 
 const NavUpperHead = () => {
   return (
@@ -17,12 +28,5 @@ const NavUpperHead = () => {
     </nav>
   );
 };
-
-const ContactItem = ({ icon, text }: { icon: JSX.Element; text: string }) => (
-  <div className="contact-item">
-    <div className="contact-icon">{icon}</div>
-    <p className="md:text-[1.2vw]">{text}</p>
-  </div>
-);
 
 export default NavUpperHead;
