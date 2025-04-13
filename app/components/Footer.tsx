@@ -1,5 +1,7 @@
+import emailjs from 'emailjs-com'
 import Image from "next/image";
 import Link from "next/link";
+import { useRef } from "react";
 import { BiLocationPlus, BiUser } from "react-icons/bi";
 import { BsYoutube } from "react-icons/bs";
 import { FaFacebook } from "react-icons/fa";
@@ -10,6 +12,20 @@ import { PiPhone } from "react-icons/pi";
 import { TfiEmail } from "react-icons/tfi";
 
 export default function Footer() {
+  const form = useRef<HTMLFormElement>(null);
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (form.current){
+      emailjs.sendForm(
+        'service_1q2hi7s',
+        'template_uxjwvff',
+        form.current,
+        'uEzdrEMTD6xE9M2wj',
+      );
+      (e.target as HTMLFormElement).reset();
+    }
+    
+  };
   return (
     <div id="contact">
     <div id="getanestimate" className="relative w-full flex flex-col place-items-center">
@@ -29,12 +45,17 @@ export default function Footer() {
           </div>
 
           {/* Form Card */}
-          <form className="w-[70%] flex flex-col gap-5">
+          <form 
+          ref={form} 
+          onSubmit={sendEmail}
+          className="w-[70%] flex flex-col gap-5">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="flex items-center bg-white/20 border border-white rounded-3xl p-3 text-white">
   <input
     type="text"
+    name='name'
     placeholder="Name"
+    required
     className="bg-transparent flex-1 focus:outline-none text-white placeholder-white"
   />
   <BiUser />
@@ -42,7 +63,9 @@ export default function Footer() {
 <div className="flex items-center bg-white/20 border border-white rounded-3xl p-3 text-white">
   <input
     type="text"
+    name='phone'
     placeholder="Phone"
+    required
     className="bg-transparent flex-1 focus:outline-none text-white placeholder-white"
   />
   <PiPhone />
@@ -51,13 +74,16 @@ export default function Footer() {
 <div className="flex items-center bg-white/20 border border-white rounded-3xl p-3 text-white">
   <input
     type="email"
+    name='email'
     placeholder="Email"
+    required
     className="bg-transparent flex-1 focus:outline-none text-white placeholder-white"
   />
   <TfiEmail />
 </div>
             </div>
             <textarea
+              name='message'
               placeholder="Type your message..."
               className="border border-white p-3 rounded w-full text-white bg-white/20"
             ></textarea>

@@ -127,7 +127,8 @@ const OurServices = () => {
         <div className="flex flex-col p-2 md:p-0  relative top-[200] gap-5 w-full md:w-[90%] lg:w-[80%]">
           <div className="flex flex-col gap-5 md:flex-row justify-between" data-aos="fade-up">
             <SectionHeader title="See the Difference - Before & After" subtitle="Let us help you build your Cold Room" />
-            <button className="estimate-btn h-fit">REQUEST A FREE ESTIMATE</button>
+            <button className="estimate-btn h-fit"
+              onClick={handleClick}>REQUEST A FREE ESTIMATE</button>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-2">
             {[ 
