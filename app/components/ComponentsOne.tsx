@@ -17,10 +17,14 @@ const ComponentsOne = () => {
       <Video />
         <About />
         <OurServices />
-        <GetReady />
+        <div className='relative top-60'>
+          <GetReady />
           <Testemonials />
           <PricingPremiumSection />
-           <Footer />
+        </div>
+          <div className='relative top-30'>
+                  <Footer />
+                  </div>
     </>
   )
 }

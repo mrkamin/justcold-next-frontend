@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import Image from "next/image";
+import { handleClick } from "../page";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -81,7 +82,7 @@ const Navbar = () => {
               }
             )}
           </ul>
-          <button className="estimate-btn">Get a Free Estimation</button>
+          <button className="estimate-btn" onClick={handleClick}>Get a Free Estimation</button>
         </div>
       </div>
     </nav>

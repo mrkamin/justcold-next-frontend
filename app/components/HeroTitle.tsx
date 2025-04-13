@@ -1,3 +1,5 @@
+import { handleClick } from "../page";
+
 const HeroTitle = () => {
   return (
     <div className="hero-title-container">
@@ -17,7 +19,8 @@ const HeroTitle = () => {
       </p>
 
       <div>
-        <button className="estimate-btn">
+        <button className="estimate-btn"
+        onClick={handleClick}>
           Get a Free Estimation
         </button>
       </div>

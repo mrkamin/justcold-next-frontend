@@ -2,6 +2,7 @@ import Image from "next/image";
 import { BiArrowToRight } from "react-icons/bi";
 import { Data } from "../Data";
 import OurServiceVideoSec from "./OurServiceVideoSec";
+import { handleClick } from "../page";
 
 interface SectionHeaderProps {
   title: string;
@@ -90,13 +91,15 @@ const OurServices = () => {
           <div className="flex flex-col p-2 md:p-0  gap-5 w-full md:w-[90%] lg:w-[80%]">
             <div className="flex flex-col gap-5 md:flex-row justify-between w-full" data-aos="fade-up">
               <SectionHeader title="Our Services" subtitle="Comprehensive Refrigeration & Maintenance Services" />
-              <button className="estimate-btn h-fit">REQUEST A FREE ESTIMATE</button>
+              <button className="estimate-btn h-fit"
+                onClick={handleClick}
+              >REQUEST A FREE ESTIMATE</button>
             </div>
             <div className="service-card">
               {Data.map((item) => <ServiceCard key={item.id} item={item} />)}
             </div>
           </div>
-          <div className="flex h-[400px] sm:h-[350px] md:h-[330px] p-2 md:p-0 flex-col w-full md:w-[90%] lg:w-[80%] items-center gap-5 w-full">
+          <div className="flex h-[400px] relative sm:h-[350px] md:h-[330px] p-2 md:p-0 flex-col w-full md:w-[90%] lg:w-[80%] items-center gap-5 w-full">
             <div className="flex flex-col gap-5 md:flex-row place-items-center" data-aos="fade-up">
               <div className="flex flex-col gap-2 place-items-center text-[#1f1f38]">
                 <div className="place-items-center">

@@ -272,7 +272,7 @@ body {
 /* about */
 
 .about-container {
-  @apply relative w-full py-5
+  @apply relative w-full
   flex flex-col items-center;
 }
 
@@ -378,7 +378,7 @@ body {
 
 /* General Styling */
 .ourservices-container {
-  @apply place-items-center py-10 relative;
+  @apply place-items-center relative;
 }
 
 .ourservices-wrapper {
