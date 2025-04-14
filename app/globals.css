@@ -210,6 +210,16 @@ body {
   border border-[#4db5ff]
   md:text-[1.5vw]
 }
+.hero-estimat-btn {
+  @apply bg-[#4db5ff] text-white 
+  rounded-4xl w-fit px-4 
+  hover:bg-[#1f1f3890] 
+  hover:text-[#ffffff90] 
+  transition-all duration-500
+  ease-in-out cursor-pointer
+  border border-[#4db5ff]
+  md:text-[1rem]
+}
 
 /* Video */
 
@@ -279,6 +289,38 @@ body {
   @apply text-white/80 bg-[#1f1f38] 
   rounded-lg p-2 lg:w-[50%] whitespace-pre-line
   text-[3vw] md:text-[2vw] lg:text-[1vw];
+}
+
+.hero-title-grid-cont {
+  @apply
+  grid 
+  grid-cols-[16%_16%_16%_16%_16%_16%]
+  w-fit
+  
+}
+
+.hero-title-grid-cont > div:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.hero-title-grid-cont > div:nth-child(2) {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.hero-title-grid-cont > div:nth-child(3) {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+.hero-title-grid-cont > div:nth-child(4) {
+  grid-column-start: 4;
+  grid-column-end: 5;
+}
+.hero-title-grid-cont > div:nth-child(6) {
+  grid-column-start: 5;
+  grid-column-end: 6;
 }
 
 /* about */

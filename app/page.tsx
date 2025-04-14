@@ -5,6 +5,8 @@ import ComponentOne from "./components/ComponentsOne";
 
 import "aos/dist/aos.css";
 
+export const CLOUDINARY_BASE_URL = "https://res.cloudinary.com/dagjuuf4v/image/upload/v1742726726/";
+
 export const handleClick = () => {
   const element = document.getElementById("contact");
   if (element) {
