@@ -3,35 +3,35 @@ import { FiMenu, FiX } from "react-icons/fi";
 import Image from "next/image";
 import { handleClick } from "../page";
 
+const sections = ["home", "aboutus", "services", "gallery", "testimonials","contact"];
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home"); // Track the active section
 
-  useEffect(() => {
-    const handleScroll = () => {
+  const handleScroll = useCallback(() => {
       setIsScrolled(window.scrollY > 50);
 
-      // Automatically update active section based on scroll position
-      const sections = ["home", "aboutus", "services", "gallery", "testimonials", "contact"];
-      sections.forEach((section) => {
-        const element = document.getElementById(section);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          if (rect.top <= 150 && rect.bottom >= 150) {
+      for (const section of sections) {
+        const el = document.getElementById(section);
+        if (el) {
+          const {top, bottom} = el.getBoundingClientRect();
+          if (top <= 150 && bottom >= 150) {
             setActiveSection(section);
+            break;
           }
         }
-      });
-    };
+      }
+  }, []);
 
+  useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [handleScroll]);
 
   const toggleMenu = useCallback(() => setIsOpen((prev) => !prev), []);
 
-  // Scroll to section and set active class
   const handleNavClick = (section: string) => {
     const element = document.getElementById(section);
     if (element) {
@@ -67,20 +67,17 @@ const Navbar = () => {
         {/* Navigation Links */}
         <div className={`nav-links ${isOpen ? "nav-links-open" : "nav-links-closed"}`}>
           <ul className="menu-list">
-            {["Home", "About Us", "Services", "Gallery", "Testimonials", "Contact"].map(
-              (item) => {
-                const sectionId = item.toLowerCase().replace(/\s+/g, "");
-                return (
+            {sections.map(
+              (section) => ( 
                   <li
-                    key={item}
-                    className={`menu-item ${activeSection === sectionId ? "active" : ""}`}
-                    onClick={() => handleNavClick(sectionId)}
+                    key={section}
+                    className={`menu-item ${activeSection === section ? "active" : ""}`}
+                    onClick={() => handleNavClick(section)}
                   >
-                    {item}
+                    {section.charAt(0).toUpperCase() + section.slice(1).replace(/([A-Z])/g, '$1')}
                   </li>
-                );
+            ))
               }
-            )}
           </ul>
           <button className="estimate-btn" onClick={handleClick}>Get a Free Estimation</button>
         </div>

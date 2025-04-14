@@ -52,13 +52,13 @@ const Testemonials = () => {
   {/* Navigation buttons */}
   <button
     ref={prevRef}
-    className="absolute left-0 md:left-8 lg:left-15 xl:left-20 top-1/2 -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow"
+    className="absolute left-0 md:left-8 lg:left-15 xl:left-20 top-1/2 -translate-y-1/2 z-1 bg-white p-2 rounded-full shadow"
   >
     <BsArrowLeft className="text-2xl text-gray-800" />
   </button>
   <button
     ref={nextRef}
-    className="absolute right-0 md:right-8 lg:right-15 xl:right-20 top-1/2 -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow"
+    className="absolute right-0 md:right-8 lg:right-15 xl:right-20 top-1/2 -translate-y-1/2 z-1 bg-white p-2 rounded-full shadow"
   >
     <BsArrowRight className="text-2xl text-gray-800" />
   </button>

@@ -30,7 +30,7 @@ export default function Footer() {
     <div id="contact">
     <div id="getanestimate" className="relative w-full flex flex-col place-items-center">
       {/* Consultation Section */}
-      <section className="relative z-10 bottom-[-170] w-[80%] bg-gradient-to-b rounded from-[#4db5ff] to-[#1f1f38] py-12 px-4">
+      <section className="relative z-1 bottom-[-170] w-[80%] bg-gradient-to-b rounded from-[#4db5ff] to-[#1f1f38] py-12 px-4">
         <GiBubbles className='text-white h-10 w-16 absolute bottom-5' />
         <GiBubbles className='text-white h-10 w-16 absolute right-5 top-5' />
         <div className=" flex flex-col items-center gap-5">

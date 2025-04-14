@@ -53,8 +53,8 @@ body {
   from-[#1f1f38] 
   to-[#4db5ff] p-1 flex 
   justify-center 
-  w-full z-2 h-[11vh] 
-  sm:h-[6.5vh] ;
+  w-full h-[13vh] 
+  sm:h-[6.6vh] ;
 }
 
 .nav-container {
@@ -66,7 +66,7 @@ body {
 
 .bubble-icon {
   @apply 
-  text-xl w-fit h-[5vh];
+  w-fit h-[5vh];
 }
 
 .contact-wrapper {
@@ -91,51 +91,47 @@ body {
 .divider {
   @apply 
   hidden sm:block 
-  w-6 bg-white 
+  w-6 bg-white h-px
   rotate-90;
 }
 
 /* Navbar Styles */
 #navbar {
-  position: fixed;
-  top: 0;
-  z-index: 900;
-  padding-bottom: 20px;
-  transition: var(--transition);
+  @apply 
+  fixed top-0 
+  transition-[padding] 
+  duration-500
+  ease-in-out z-2
 }
 
 .navbar {
-  @apply flex flex-col items-center
-  w-full pt-[12vh] sm:pt-[6.5vh] 
+  @apply 
+  flex flex-col items-center
+  w-full pt-[13.9vh] sm:pt-[7.5vh] 
+  md:pt-[5.5vh]
   
 }
 
 .navbar.scrolled {
-  @apply bg-gradient-to-r from-[#1f1f38] 
-  to-[#4db5ff] shadow-lg;
-}
-
-.navbar.scrolled {
-  padding-top: 10px !important;
-  padding-bottom: 10px !important;
-}
-
-@media (min-width: 768px) {
-  .navbar.scrolled {
-    padding-top: 0px !important;
-    padding-bottom: 0px !important;
-  }
+  @apply 
+  bg-gradient-to-r from-[#1f1f38] 
+  to-[#4db5ff] shadow-lg
+  pt-[10px] pb-[10px] sm:pt-3 
+  sm:pb-2 md:pt-0
+  md:pb-0;
 }
 
 .nav-content {
-  @apply relative w-full lg:w-[90%] gap-2 
+  @apply 
+  relative w-full lg:w-[90%] 
   flex flex-col md:flex-row 
   px-5 md:px-0 justify-between
-  text-white items-center;
+  text-white items-center gap-2;
 }
 
 .logo-container {
-  @apply z-2 bg-[#1f1f38] 
+  @apply 
+  z-2 bg-[#1f1f38] 
   rounded-full p-2  
   hover:bg-[#1f1f3890]
   cursor-pointer
@@ -145,23 +141,25 @@ body {
 }
 
 .menu-button {
-  @apply md:hidden text-white 
-  z-2 relative p-1 bg-[#1f1f38] 
+  @apply 
+  md:hidden text-white 
+  z-2 p-1 bg-[#1f1f38] 
   rounded-full h-fit text-2xl
-  hover:bg-[#1f1f3890] cursor-pointer
+  hover:bg-[#1f1f3890] 
+  cursor-pointer
   transition-all duration-500
   ease-in-out;
 }
 
 .nav-links {
-  @apply absolute md:static
+  @apply 
+  absolute md:static
   pt-10 pb-2 px-5 md:p-2  
-  top-[-1.1vh]  left-0 w-full md:w-fit
+  top-[-1.1vh]  left-0 w-full md:w-auto
   bg-gradient-to-r from-[#1f1f38] 
   to-[#4db5ff] transition-transform 
   duration-500 ease-in-out md:flex 
-  md:gap-2 md:items-center z-1
-  md:bg-transparent;
+  md:gap-2 md:items-center;
 }
 
 @media (min-width: 768px) {
@@ -187,21 +185,19 @@ body {
   p-2 rounded-lg ;
 }
 
-.menu-item {
-  cursor: pointer;
-  transition: color 0.3s ease-in-out;
-}
-
 .menu-item.active {
-  font-weight: bold;
-  border-bottom: 2px solid #24B8EB; /* Underline effect */
+  @apply
+  font-bold 
+  border-b-2 border-[#24b8eb]
 }
 
 
 .menu-item {
-  @apply hover:text-gray-300 
+  @apply 
+  hover:text-gray-300 
   cursor-pointer rounded-md 
-  md:text-center w-fit md:text-[1.5vw];
+  md:text-center w-fit md:text-[1.5vw]
+  transition-colors duration-500;
 }
 
 .estimate-btn {
@@ -209,7 +205,7 @@ body {
   px-4 py-1 rounded-4xl
   hover:bg-[#1f1f3890] 
   hover:text-[#ffffff90] 
-  transition-all duration-900
+  transition-all duration-500
   ease-in-out cursor-pointer
   border border-[#4db5ff]
   md:text-[1.5vw]
@@ -253,7 +249,7 @@ body {
   @apply absolute top-30
   md:left-5 lg:left-15 
   sm:w-[100%] md:w-[80%] lg:w-[40%] 
-  flex flex-col gap-4 z-30 ;
+  flex flex-col gap-4 z-1 ;
 }
 
 .hero-title-tag {
