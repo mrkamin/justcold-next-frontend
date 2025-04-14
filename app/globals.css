@@ -108,7 +108,7 @@ body {
   @apply 
   flex flex-col items-center
   w-full pt-[13.9vh] sm:pt-[7.5vh] 
-  md:pt-[5.5vh]
+  md:pt-[6vh]
   
 }
 
@@ -214,25 +214,29 @@ body {
 /* Video */
 
 .video-container {
-  @apply relative w-full 
+  @apply 
+  relative w-full 
   h-[90vh];
 }
 
 .video-element {
-  @apply w-full h-full object-cover;
+  @apply 
+  w-full h-full 
+  object-cover;
 }
 
 .video-overlay {
-  @apply hidden md:block absolute pointer-events-none 
+  @apply 
+  hidden md:block 
+  absolute pointer-events-none 
   left-[60%] top-[15vh]
   w-[30%] h-[60vh] 
   ;
 }
 
-
-
 .video-button {
-  @apply z-990 pointer-events-auto 
+  @apply 
+  z-990 
   rounded-full flex 
   items-center justify-center 
   cursor-pointer
@@ -249,7 +253,8 @@ body {
   @apply absolute top-30
   md:left-5 lg:left-15 
   sm:w-[100%] md:w-[80%] lg:w-[40%] 
-  flex flex-col gap-4 z-1 ;
+  flex flex-col gap-4 z-1 
+  pointer-events-none;
 }
 
 .hero-title-tag {
@@ -272,7 +277,7 @@ body {
 
 .hero-title-description {
   @apply text-white/80 bg-[#1f1f38] 
-  rounded-lg p-2 lg:w-[50%]
+  rounded-lg p-2 lg:w-[50%] whitespace-pre-line
   text-[3vw] md:text-[2vw] lg:text-[1vw];
 }
 
