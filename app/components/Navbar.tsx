@@ -1,7 +1,16 @@
 import { useState, useEffect, useCallback } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import Image from "next/image";
-import { handleClick } from "../page";
+
+
+export const handleClick = () => {
+  const element = document.getElementById("contact");
+  if (element) {
+    element.scrollIntoView(
+      {behavior: "smooth", block: "start"}
+    )
+  }
+}
 
 const sections = ["home", "aboutus", "services", "gallery", "testimonials","contact"];
 

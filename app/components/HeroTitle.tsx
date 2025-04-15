@@ -1,6 +1,14 @@
-import { handleClick } from "../page";
 import Image from "next/image";
 import { BsStarFill } from "react-icons/bs";
+
+export const handleClick = () => {
+  const element = document.getElementById("contact");
+  if (element) {
+    element.scrollIntoView(
+      {behavior: "smooth", block: "start"}
+    )
+  }
+}
 
 interface ImageComparisonProps {
   images: string[];

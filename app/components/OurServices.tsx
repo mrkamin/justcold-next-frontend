@@ -2,7 +2,15 @@ import Image from "next/image";
 import { BiArrowToRight } from "react-icons/bi";
 import { Data } from "../Data";
 import OurServiceVideoSec from "./OurServiceVideoSec";
-import { handleClick } from "../page";
+
+export const handleClick = () => {
+  const element = document.getElementById("contact");
+  if (element) {
+    element.scrollIntoView(
+      {behavior: "smooth", block: "start"}
+    )
+  }
+}
 
 const CLOUDINARY_BASE_URL = "https://res.cloudinary.com/dagjuuf4v/image/upload/v1742726726/";
 
