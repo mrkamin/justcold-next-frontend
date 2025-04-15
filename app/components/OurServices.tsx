@@ -3,7 +3,8 @@ import { BiArrowToRight } from "react-icons/bi";
 import { Data } from "../Data";
 import OurServiceVideoSec from "./OurServiceVideoSec";
 import { handleClick } from "../page";
-import { CLOUDINARY_BASE_URL } from "../page";
+
+const CLOUDINARY_BASE_URL = "https://res.cloudinary.com/dagjuuf4v/image/upload/v1742726726/";
 
 interface SectionHeaderProps {
   title: string;

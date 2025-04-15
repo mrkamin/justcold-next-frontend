@@ -6,7 +6,7 @@ interface ImageComparisonProps {
   images: string[];
 }
 
-export const CLOUDINARY_BASE_URL = "https://res.cloudinary.com/dagjuuf4v/image/upload/v1742726726/";
+const CLOUDINARY_BASE_URL = "https://res.cloudinary.com/dagjuuf4v/image/upload/v1742726726/";
  
 const ImageComparison: React.FC<ImageComparisonProps> = ({ images }) => {
   const fixedImages = images.map((src) =>
