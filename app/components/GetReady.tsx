@@ -77,7 +77,7 @@ const GetReady = () => {
           </button>
         </div>
 
-        <GiBubbles className="absolute text-xl text-white z-10 bottom-15 left-60 md:left-30 transform -translate-x-1/2 md:translate-x-0" />
+        <GiBubbles className="absolute text-xl text-white z-1 bottom-15 left-60 md:left-30 transform -translate-x-1/2 md:translate-x-0" />
       </div>
 
       {/* Images Grid */}

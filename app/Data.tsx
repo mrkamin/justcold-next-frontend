@@ -23,7 +23,7 @@ export const Data = [
   {
     id: 4,
     name: "Walk-in Freezers & Cold Storage",
-    image: "https://res.cloudinary.com/dagjuuf4v/image/upload/v1742742831/WhatsApp_Image_2025-03-18_at_22.01.06_8d48e0cb_ht1juq.jpg",
+    image: "https://res.cloudinary.com/dagjuuf4v/image/upload/v1742742831/8.jpg",
     discriptions:
       "Our walk-in freezers and cold storage rooms are engineered for superior temperature control and energy efficiency."
   },

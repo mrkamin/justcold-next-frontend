@@ -3,6 +3,17 @@ import { BiArrowToRight } from "react-icons/bi";
 import { Data } from "../Data";
 import OurServiceVideoSec from "./OurServiceVideoSec";
 
+export const handleClick = () => {
+  const element = document.getElementById("contact");
+  if (element) {
+    element.scrollIntoView(
+      {behavior: "smooth", block: "start"}
+    )
+  }
+}
+
+const CLOUDINARY_BASE_URL = "https://res.cloudinary.com/dagjuuf4v/image/upload/v1742726726/";
+
 interface SectionHeaderProps {
   title: string;
   subtitle: string;
@@ -22,8 +33,6 @@ interface ServiceCardProps {
 interface ImageComparisonProps {
   images: string[];
 }
-
-const CLOUDINARY_BASE_URL = "https://res.cloudinary.com/dagjuuf4v/image/upload/v1742726726/";
 
 const SectionHeader: React.FC<SectionHeaderProps> = ({ title, subtitle }) => (
   <div className="flex flex-col gap-2 place-items-center md:items-start text-[#1f1f38]">
@@ -90,13 +99,15 @@ const OurServices = () => {
           <div className="flex flex-col p-2 md:p-0  gap-5 w-full md:w-[90%] lg:w-[80%]">
             <div className="flex flex-col gap-5 md:flex-row justify-between w-full" data-aos="fade-up">
               <SectionHeader title="Our Services" subtitle="Comprehensive Refrigeration & Maintenance Services" />
-              <button className="estimate-btn h-fit">REQUEST A FREE ESTIMATE</button>
+              <button className="estimate-btn h-fit"
+                onClick={handleClick}
+              >REQUEST A FREE ESTIMATE</button>
             </div>
             <div className="service-card">
               {Data.map((item) => <ServiceCard key={item.id} item={item} />)}
             </div>
           </div>
-          <div className="flex h-[400px] sm:h-[350px] md:h-[330px] p-2 md:p-0 flex-col w-full md:w-[90%] lg:w-[80%] items-center gap-5 w-full">
+          <div className="flex h-[400px] relative sm:h-[350px] md:h-[330px] p-2 md:p-0 flex-col w-full md:w-[90%] lg:w-[80%] items-center gap-5 w-full">
             <div className="flex flex-col gap-5 md:flex-row place-items-center" data-aos="fade-up">
               <div className="flex flex-col gap-2 place-items-center text-[#1f1f38]">
                 <div className="place-items-center">
@@ -124,7 +135,8 @@ const OurServices = () => {
         <div className="flex flex-col p-2 md:p-0  relative top-[200] gap-5 w-full md:w-[90%] lg:w-[80%]">
           <div className="flex flex-col gap-5 md:flex-row justify-between" data-aos="fade-up">
             <SectionHeader title="See the Difference - Before & After" subtitle="Let us help you build your Cold Room" />
-            <button className="estimate-btn h-fit">REQUEST A FREE ESTIMATE</button>
+            <button className="estimate-btn h-fit"
+              onClick={handleClick}>REQUEST A FREE ESTIMATE</button>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-2">
             {[ 
