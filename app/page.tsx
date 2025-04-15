@@ -5,10 +5,6 @@ import ComponentOne from "./components/ComponentsOne";
 
 import "aos/dist/aos.css";
 
-export const AOSWrapper = ({children}: {children: React.ReactNode}) => (
-  <div data-aos="fade-up">{children}</div>
-)
-
 export const handleClick = () => {
   const element = document.getElementById("contact");
   if (element) {
