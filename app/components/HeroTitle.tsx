@@ -1,4 +1,4 @@
-import { handleClick, CLOUDINARY_BASE_URL } from "../page";
+import { handleClick } from "../page";
 import Image from "next/image";
 import { BsStarFill } from "react-icons/bs";
 
@@ -6,6 +6,8 @@ interface ImageComparisonProps {
   images: string[];
 }
 
+export const CLOUDINARY_BASE_URL = "https://res.cloudinary.com/dagjuuf4v/image/upload/v1742726726/";
+ 
 const ImageComparison: React.FC<ImageComparisonProps> = ({ images }) => {
   const fixedImages = images.map((src) =>
     src.startsWith("http") ? src : `${CLOUDINARY_BASE_URL}${src.replace("/", "")}`
