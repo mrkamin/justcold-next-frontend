@@ -1,6 +1,5 @@
 import { handleClick, CLOUDINARY_BASE_URL } from "../page";
 import Image from "next/image";
-import { BiStar } from "react-icons/bi";
 import { BsStarFill } from "react-icons/bs";
 
 interface ImageComparisonProps {
