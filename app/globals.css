@@ -407,8 +407,8 @@ body {
 
 .about-description {
   @apply text-gray-900
-  text-[6vw]
-  md:text-[3vw] lg:text-[1vw];
+  text-[3vw]
+  lg:text-[1vw];
 }
 
 .about-services-grid {
@@ -426,8 +426,8 @@ body {
 
 .about-service-item {
   @apply text-[#1f1f38]
-  font-bold text-[6vw]
-  md:text-[3vw] lg:text-[1vw];
+  font-bold text-[3vw]
+  lg:text-[1vw];
 }
 
 /* General Styling */
