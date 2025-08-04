@@ -61,8 +61,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ item }) => (
       <h1 className="text-lg font-bold">{item.name}</h1>
       <p>{item.discriptions}</p>
       <div className="flex gap-3 items-center">
-        <button className="font-bold">BOOK NOW</button>
-        <BiArrowToRight className="text-[#4db5ff] text-2xl" />
+        <button className="font-bold cursor-pointer" onClick={handleClick}>BOOK NOW</button>
+        <BiArrowToRight onClick={handleClick} className="cursor-pointer text-[#4db5ff] text-2xl" />
       </div>
     </div>
   </div>
